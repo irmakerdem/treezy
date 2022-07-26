@@ -18,7 +18,8 @@ class App extends Component {
     }
   }
   
-  changeZipCode = (zip) => {
+  changeZipCode = (zip , event) => {
+    event.preventDefault()
     console.log('zip-code')
   }
 

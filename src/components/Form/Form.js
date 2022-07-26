@@ -17,7 +17,7 @@ class Form extends Component {
 
     render() {
     return (
-        <form onSubmit={() => this.props.changeZipCode(this.state.zip)}>
+        <form onSubmit={(event) => this.props.changeZipCode(this.state.zip, event)}>
             <p>Zip Code:</p>
             <input
                 className='zip-code-entry'
@@ -26,8 +26,7 @@ class Form extends Component {
                 value={this.state.zip}
                 name='zip'
                 placeholder='Enter Zip Code'
-                min='5'
-                max='5'
+                pattern='[0-9]{5}'
                 onChange={event => this.handleChange(event)}
                 required
             />
