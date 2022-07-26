@@ -4,7 +4,7 @@ import DetailsContainer from '../DetailsContainer/DetailsContainer';
 import Header from '../Header/Header';
 import SearchResult from '../SearchResult/SearchResult';
 import Home from '../Home/Home';
-import { getTrees } from '../../apiCalls';
+import { getTrees, getZip } from '../../apiCalls';
 
 class App extends Component {
   constructor() {
@@ -37,12 +37,13 @@ class App extends Component {
   componentDidMount = () => {
     getTrees() 
     .then(data => {
-      console.log(data, "DATA")
-      this.setState({ allTrees : data});
+      this.setState( { allTrees : data} );
     })
-    console.log(this.state.allTrees)
+    getZip()
+    .then(data => {
+      this.setState( { allZipCodes : data} );
+    })
   }
-  
   
   render() {
     return (
