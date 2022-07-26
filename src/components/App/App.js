@@ -14,7 +14,7 @@ class App extends Component {
       allZipCodes: [],
       selectedZip: '',
       filteredTrees: [], 
-      selectedTreee: ''
+      selectedTree: ''
     }
   }
   
@@ -50,7 +50,7 @@ class App extends Component {
       <>
       <p>App Component</p>
       <Header />
-      <Home />
+      <Home changeZipCode={this.changeZipCode}/>
       <SearchResult />
       <DetailsContainer />
       </>
