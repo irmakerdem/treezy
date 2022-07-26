@@ -6,7 +6,7 @@ import SearchResult from '../SearchResult/SearchResult';
 import Home from '../Home/Home';
 // import apiCalls from '../apiCalls';
 
-class App extends Component() {
+class App extends Component {
   constructor() {
     super()
     this.state = {

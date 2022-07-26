@@ -1,9 +1,13 @@
 import React from "react";
-import './SearchResult.css'
+import './SearchResult.css';
+import TreesContainer from "../TreesContainer/TreesContainer";
 
 const SearchResult = () => {
     return (
-        <p>SearchResult</p>
+        <>
+       <TreesContainer />
+       <p>SearchResult</p>
+       </>
     )
 }
 export default SearchResult;
