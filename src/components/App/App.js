@@ -20,7 +20,10 @@ class App extends Component {
   
   changeZipCode = (zip , event) => {
     event.preventDefault()
-    console.log('zip-code')
+    this.setState({
+      selectedZip : zip
+    })
+    this.filterTrees(zip)
   }
 
   filterTrees = (zip) => {
