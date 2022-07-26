@@ -4,7 +4,7 @@ import DetailsContainer from '../DetailsContainer/DetailsContainer';
 import Header from '../Header/Header';
 import SearchResult from '../SearchResult/SearchResult';
 import Home from '../Home/Home';
-// import apiCalls from '../apiCalls';
+import { getTrees } from '../../apiCalls';
 
 class App extends Component {
   constructor() {
@@ -35,9 +35,15 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    console.log('component did mount')
+    getTrees() 
+    .then(data => {
+      console.log(data, "DATA")
+      this.setState({ allTrees : data});
+    })
+    console.log(this.state.allTrees)
   }
-
+  
+  
   render() {
     return (
       <>
