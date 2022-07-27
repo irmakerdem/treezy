@@ -4,7 +4,7 @@ import DetailsContainer from '../DetailsContainer/DetailsContainer';
 import Header from '../Header/Header';
 import SearchResult from '../SearchResult/SearchResult';
 import Home from '../Home/Home';
-// import apiCalls from '../apiCalls';
+import { getTrees, getZip } from '../../apiCalls';
 
 class App extends Component {
   constructor() {
@@ -14,12 +14,16 @@ class App extends Component {
       allZipCodes: [],
       selectedZip: '',
       filteredTrees: [], 
-      selectedTreee: ''
+      selectedTree: ''
     }
   }
   
-  changeZipCode = (zip) => {
-    console.log('zip-code')
+  changeZipCode = (zip , event) => {
+    event.preventDefault()
+    this.setState({
+      selectedZip : zip
+    })
+    this.filterTrees(zip)
   }
 
   filterTrees = (zip) => {
@@ -35,15 +39,22 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    console.log('component did mount')
+    getTrees() 
+    .then(data => {
+      this.setState( { allTrees : data} );
+    })
+    getZip()
+    .then(data => {
+      this.setState( { allZipCodes : data} );
+    })
   }
-
+  
   render() {
     return (
       <>
       <p>App Component</p>
       <Header />
-      <Home />
+      <Home changeZipCode={this.changeZipCode}/>
       <SearchResult />
       <DetailsContainer />
       </>
