@@ -7,7 +7,7 @@ const SearchResult = ({filteredTrees}) => {
     return (
         <>
         <h2>Best Trees For Your Area:</h2>
-        {/* <h3>Your Growing Zone: {filteredTrees[0].growing_zone}</h3> */}
+        <h3>Your Growing Zone: Here </h3>
        <TreesContainer filteredTrees={filteredTrees}/>
        <img src={arrow} alt='black arrow pointing to the left'></img>
        </>

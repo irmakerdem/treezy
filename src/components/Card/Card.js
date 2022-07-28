@@ -1,12 +1,15 @@
 import React from "react";
-import './Card.css'
+import './Card.css';
+import { Link } from 'react-router-dom';
 
 
-const Card = ({key, name, mainImage, growingZone}) => {
+const Card = ({id, name, mainImage, growingZone}) => {
     return (
         <>
         <p>{name}</p>
-        <img src={mainImage}></img>
+        <Link to={'trees/' + id}>
+            <img src={mainImage}></img>
+        </Link>
         </>
     )
 }
