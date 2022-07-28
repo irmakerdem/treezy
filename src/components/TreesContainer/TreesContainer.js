@@ -2,7 +2,7 @@ import React from "react";
 import './TreesContainer.css';
 import Card from '../Card/Card';
 
-const TreesContainer = ({filteredTrees}) => {
+const TreesContainer = ({filteredTrees, changeSelectedTree}) => {
     const resultsList = filteredTrees.map(tree => {
       return  (<Card 
             key={tree.id}
@@ -10,6 +10,7 @@ const TreesContainer = ({filteredTrees}) => {
             name={tree.tree_name}
             mainImage={tree.main_tree_image}
             growingZone={tree.growing_zone}
+            changeSelectedTree={changeSelectedTree}
         />    
       )
     })

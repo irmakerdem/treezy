@@ -3,12 +3,12 @@ import './Card.css';
 import { Link } from 'react-router-dom';
 
 
-const Card = ({id, name, mainImage, growingZone}) => {
+const Card = ({id, name, mainImage, growingZone, changeSelectedTree}) => {
     return (
         <>
         <p>{name}</p>
         <Link to={'trees/' + id}>
-            <img src={mainImage}></img>
+            <img src={mainImage} id={id} onClick={() => changeSelectedTree(id)}></img>
         </Link>
         </>
     )

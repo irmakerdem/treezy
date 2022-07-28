@@ -34,13 +34,22 @@ class App extends Component {
       })
   }
 
-  viewTree = (id) => {
-    console.log('view tree')
+  changeSelectedTree = (idt) => {
+    console.log('id tree',idt)
+    let matchTree = this.state.filteredTrees.find(tree => {
+     return tree.id === idt})
+     console.log('MATCH TREE BEFORE SET STATE', matchTree)
+    this.setState({
+      selectedTree: matchTree
+    })
+    console.log('MATCH TREE AT THE END',matchTree)
+    // this.viewTree(this.state.selectedTree)
   }
 
-  changeSelectedTree = (id) => {
-    console.log('change tree')
+  viewTree = (selectedTree) => {
+//
   }
+
 
   componentDidMount = () => {
     getTrees() 
@@ -54,12 +63,13 @@ class App extends Component {
   }
   
   render() {
+    console.log('SELECTED TREE AT THE ACTUAL END', this.state.selectedTree)
     return (
       <>
       <Header />
       <Home changeZipCode={this.changeZipCode}/>
-      <SearchResult filteredTrees={this.state.filteredTrees}/>
-      <DetailsContainer />
+      <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>
+      <DetailsContainer selectedTree={this.state.selectedTree}/>
       </>
     )
   }
