@@ -6,6 +6,7 @@ import SearchResult from '../SearchResult/SearchResult';
 import Home from '../Home/Home';
 import { getTrees, getZip } from '../../apiCalls';
 import { Switch , Route } from 'react-router-dom';
+import Error from '../Error/Error';
 
 class App extends Component {
   constructor() {
@@ -69,9 +70,10 @@ class App extends Component {
       <>
         <Header />
         <Switch>
-          <Route exact path='/' render={ () => <Home changeZipCode={this.changeZipCode}/>}/>
-          <Route exact path='/result' render={ () => <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}/>
-          <Route exact path='/details' render={ () => <DetailsContainer selectedTree={this.state.selectedTree}/>}/>
+          <Route exact path='/' render={() => <Home changeZipCode={this.changeZipCode}/>}/>
+          <Route exact path='/result' render={() => <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}/>
+          <Route exact path='/details' render={() => <DetailsContainer selectedTree={this.state.selectedTree}/>}/>
+          <Route path='/*' render={()=> <Error />}/>
         </Switch>
       </>
     )
