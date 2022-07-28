@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import SearchResult from '../SearchResult/SearchResult';
 import Home from '../Home/Home';
 import { getTrees, getZip } from '../../apiCalls';
+import { Switch , Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -66,10 +67,12 @@ class App extends Component {
     console.log('SELECTED TREE AT THE ACTUAL END', this.state.selectedTree)
     return (
       <>
-      <Header />
-      <Home changeZipCode={this.changeZipCode}/>
-      <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>
-      <DetailsContainer selectedTree={this.state.selectedTree}/>
+        <Header />
+        <Switch>
+          <Route exact path='/' render={ () => <Home changeZipCode={this.changeZipCode}/>}/>
+          <Route exact path='/result' render={ () => <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}/>
+          <Route exact path='/details' render={ () => <DetailsContainer selectedTree={this.state.selectedTree}/>}/>
+        </Switch>
       </>
     )
   }
