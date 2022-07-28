@@ -77,8 +77,11 @@ class App extends Component {
           <Route exact path="/">
 	          {this.state.selectedZip ? <Redirect to="/result" /> : <Home changeZipCode={this.changeZipCode}/>}
           </Route>;
-          <Route exact path='/result' render={() => <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}/>
-          <Route exact path='/details' render={() => <DetailsContainer selectedTree={this.state.selectedTree}/>}/>
+          <Route exact path="/result">
+	          {this.state.selectedTree ? <Redirect to="/trees/:id" /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}
+          </Route>; 
+
+          <Route exact path='/trees/:id' render={() => <DetailsContainer selectedTree={this.state.selectedTree}/>}/>
           <Route path='/*' render={()=> <Error />}/>
         </Switch>
       </>
@@ -89,6 +92,6 @@ class App extends Component {
 export default App;
 
 
-{/* <Route exact path="/">
-	{this.state.selectedZip ? <Redirect to="/result" /> : <Home changeZipCode={this.changeZipCode}/>}
-</Route>; */}
+{/* <Route exact path="/result">
+	{this.state.selectedTree ? <Redirect to="/details" /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}
+</Route>;  */}
