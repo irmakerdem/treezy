@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import SearchResult from '../SearchResult/SearchResult';
 import Home from '../Home/Home';
 import { getTrees, getZip } from '../../apiCalls';
-import { Switch , Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Error from '../Error/Error';
 
 class App extends Component {
@@ -66,11 +66,17 @@ class App extends Component {
   
   render() {
     console.log('SELECTED TREE AT THE ACTUAL END', this.state.selectedTree)
+    // const page = this.state.selectedZip && this.state.selectedTree ? '/details' : '/result' 
+    // page = selectedTree ? '/details' : '/result'
+    // console.log(page, "PAGE71")
     return (
       <>
         <Header />
         <Switch>
-          <Route exact path='/' render={() => <Home changeZipCode={this.changeZipCode}/>}/>
+          {/* <Route exact path='/' render={() => <Home changeZipCode={this.changeZipCode}/>}/> */}
+          <Route exact path="/">
+	          {this.state.selectedZip ? <Redirect to="/result" /> : <Home changeZipCode={this.changeZipCode}/>}
+          </Route>;
           <Route exact path='/result' render={() => <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}/>
           <Route exact path='/details' render={() => <DetailsContainer selectedTree={this.state.selectedTree}/>}/>
           <Route path='/*' render={()=> <Error />}/>
@@ -81,3 +87,8 @@ class App extends Component {
   
 }
 export default App;
+
+
+{/* <Route exact path="/">
+	{this.state.selectedZip ? <Redirect to="/result" /> : <Home changeZipCode={this.changeZipCode}/>}
+</Route>; */}

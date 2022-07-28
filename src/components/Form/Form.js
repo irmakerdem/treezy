@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './Form.css'
+import './Form.css';
+import { Link } from 'react-router-dom';
+
 
 class Form extends Component {
     constructor() {
@@ -30,11 +32,13 @@ class Form extends Component {
                 onChange={event => this.handleChange(event)}
                 required
             />
+            {/* <Link to='/result'> */}
             <input
                 type='submit'
                 value='GO!'
                 data-cy='go-button'
             />
+            {/* </Link> */}
         </form>
     )
 }
