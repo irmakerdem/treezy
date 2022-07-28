@@ -1,9 +1,13 @@
 import React from "react";
 import './Card.css'
 
-const Card = () => {
+
+const Card = ({key, name, mainImage, growingZone}) => {
     return (
-        <p>Card</p>
+        <>
+        <p>{name}</p>
+        <img src={mainImage}></img>
+        </>
     )
 }
 export default Card;

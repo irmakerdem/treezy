@@ -26,8 +26,12 @@ class App extends Component {
     this.filterTrees(zip)
   }
 
-  filterTrees = (zip) => {
-    console.log('filter trees')
+  filterTrees = (zippy) => {
+    let matchZip = this.state.allZipCodes.find(zip => zip.zip_code === zippy);
+    let treeList = this.state.allTrees.filter(tree => tree.growing_zone === matchZip.growing_zone)
+      this.setState({
+        filteredTrees : treeList
+      })
   }
 
   viewTree = (id) => {
@@ -52,10 +56,9 @@ class App extends Component {
   render() {
     return (
       <>
-      <p>App Component</p>
       <Header />
       <Home changeZipCode={this.changeZipCode}/>
-      <SearchResult />
+      <SearchResult filteredTrees={this.state.filteredTrees}/>
       <DetailsContainer />
       </>
     )
