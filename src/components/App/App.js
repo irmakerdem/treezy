@@ -48,8 +48,12 @@ class App extends Component {
     // this.viewTree(this.state.selectedTree)
   }
 
-  viewTree = (selectedTree) => {
-//
+  viewTree = (selectedTreeID) => {
+    let matchTree = this.state.allTrees.find(tree => {
+      return tree.id === selectedTreeID})
+      this.setState({
+        selectedTree: matchTree
+      })
   }
 
   clearZipTrees = () => {
@@ -76,6 +80,8 @@ class App extends Component {
     })
   }
   
+
+
   render() {
     console.log('SELECTED TREE AT THE ACTUAL END', this.state.selectedTree)
     // const page = this.state.selectedZip && this.state.selectedTree ? '/details' : '/result' 
@@ -85,15 +91,21 @@ class App extends Component {
       <>
         <Header clearZipTrees={this.clearZipTrees}/>
         <Switch>
-          {/* <Route exact path='/' render={() => <Home changeZipCode={this.changeZipCode}/>}/> */}
           <Route exact path="/">
 	          {this.state.selectedZip ? <Redirect to="/result" /> : <Home changeZipCode={this.changeZipCode}/>}
           </Route>;
           <Route exact path="/result">
 	          {this.state.selectedTree ? <Redirect to="/trees/:id" /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree} clearZipTrees={this.clearZipTrees}/>}
           </Route>; 
-
-          <Route exact path='/trees/:id' render={() => <DetailsContainer selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>}/>
+          <Route
+          exact path='/trees/:id'
+          render={({ match }) => {
+            // {this.viewTree(match.params.id)}
+            {console.log('matchparams',match.params.id)}
+            {console.log('selectedTree 105',this.state.selectedTree)}
+            <DetailsContainer selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>    
+          }  } />
+          {/* <Route path='/trees/:id' render={() => <DetailsContainer selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>}/> */}
           <Route path='/*' render={()=> <Error />}/>
         </Switch>
       </>
