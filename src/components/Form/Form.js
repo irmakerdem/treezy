@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './Form.css'
+import './Form.css';
+import { Link } from 'react-router-dom';
+
 
 class Form extends Component {
     constructor() {
@@ -25,16 +27,18 @@ class Form extends Component {
                 data-cy='zip-code-entry'
                 value={this.state.zip}
                 name='zip'
-                placeholder='Enter Zip Code'
+                placeholder='Enter 5-Digit Zip Code'
                 pattern='[0-9]{5}'
                 onChange={event => this.handleChange(event)}
                 required
             />
+            {/* <Link to='/result'> */}
             <input
                 type='submit'
                 value='GO!'
                 data-cy='go-button'
             />
+            {/* </Link> */}
         </form>
     )
 }
