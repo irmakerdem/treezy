@@ -4,7 +4,7 @@ import arrow from '../../assets/arrow.png';
 import { Link } from 'react-router-dom';
 
 const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
-
+   window.scrollTo(0, 0)
    console.log('details container selected tree',selectedTree)
 
    const createHTML = () => {

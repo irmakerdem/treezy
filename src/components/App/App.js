@@ -102,8 +102,3 @@ class App extends Component {
   
 }
 export default App;
-
-
-{/* <Route exact path="/result">
-	{this.state.selectedTree ? <Redirect to="/details" /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}
-</Route>;  */}

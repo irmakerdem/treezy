@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const SearchResult = ({filteredTrees, changeSelectedTree, clearZipTrees}) => {
+    window.scrollTo(0,0)
     return (
         <>
             <h2>Best Trees For Your Area</h2>
