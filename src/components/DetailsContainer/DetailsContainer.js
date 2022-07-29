@@ -5,18 +5,22 @@ import { Link } from 'react-router-dom';
 
 const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
 
-    console.log('details container selected tree',selectedTree)
+   console.log('details container selected tree',selectedTree)
+
+   const createHTML = () => {
+      return {__html: selectedTree.overview_description};
+   }
 
     return (
        <>
        <h2>{`About: ${selectedTree.tree_name}`}</h2>
-       <h3>{`${selectedTree.tree_name} Zone: Brandon <3`}</h3>
+       <h3>{`${selectedTree.tree_name} Zone: ${selectedTree.growing_zone}`}</h3>
        <section>
-         <h5>{`${selectedTree.tree_name}`}</h5>
             {/* IMAGES GO HERE */}
-       </section>
-       <section>
-        <p>Attributes</p>
+      </section>
+      <section>
+      <p>Attributes</p>
+        <p dangerouslySetInnerHTML={ createHTML() } />
        </section>
        <section>
         <p>Sun</p>
