@@ -1,8 +1,9 @@
 import React from "react";
-import './DetailsContainer.css'
+import './DetailsContainer.css';
 import arrow from '../../assets/arrow.png';
+import { Link } from 'react-router-dom';
 
-const DetailsContainer = ({selectedTree}) => {
+const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
 
     console.log('details container selected tree',selectedTree)
 
@@ -23,7 +24,9 @@ const DetailsContainer = ({selectedTree}) => {
         <p>Growth Speed</p>
         <p>Height</p>
        </section>
-       <img src={arrow} alt='black arrow pointing to the left'></img>
+      <Link to='/result'>
+         <img src={arrow} alt='black arrow pointing to the left' onClick={() => clearSelectedTree()}></img>
+       </Link>
        </>
     )
 }

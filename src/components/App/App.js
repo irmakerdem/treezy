@@ -59,6 +59,12 @@ class App extends Component {
     })
   }
 
+  clearSelectedTree = () => {
+    this.setState({
+      selectedTree: ''
+    })
+  }
+
   componentDidMount = () => {
     getTrees() 
     .then(data => {
@@ -84,10 +90,10 @@ class App extends Component {
 	          {this.state.selectedZip ? <Redirect to="/result" /> : <Home changeZipCode={this.changeZipCode}/>}
           </Route>;
           <Route exact path="/result">
-	          {this.state.selectedTree ? <Redirect to="/trees/:id" /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}
+	          {this.state.selectedTree ? <Redirect to="/trees/:id" /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree} clearZipTrees={this.clearZipTrees}/>}
           </Route>; 
 
-          <Route exact path='/trees/:id' render={() => <DetailsContainer selectedTree={this.state.selectedTree}/>}/>
+          <Route exact path='/trees/:id' render={() => <DetailsContainer selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>}/>
           <Route path='/*' render={()=> <Error />}/>
         </Switch>
       </>
