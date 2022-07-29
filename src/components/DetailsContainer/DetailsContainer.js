@@ -17,11 +17,11 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
        <p>{`Botanical Name: ${selectedTree.botanical_name}`}</p><br></br>
        <h3>{`${selectedTree.tree_name} Growing Zone: ${selectedTree.growing_zone}`}</h3>
        <section className='detailImages'>
-         <img src={selectedTree.main_tree_image} alt={selectedTree.tree_name} /><br></br>
-         <img src={selectedTree.tree_image_1} alt={selectedTree.tree_name} /><br></br>
-         <img src={selectedTree.tree_image_2} alt={selectedTree.tree_name} /><br></br>
-         <img src={selectedTree.tree_image_3} alt={selectedTree.tree_name} /><br></br>
-         <img src={selectedTree.tree_image_4} alt={selectedTree.tree_name} /><br></br>
+         { selectedTree.main_tree_image === 'N/A' ? null : <img src={selectedTree.main_tree_image}  /> }<br></br>
+         { selectedTree.tree_image_1 === 'N/A' ? null : <img src={selectedTree.tree_image_1} /> }<br></br>
+         { selectedTree.tree_image_2 === 'N/A' ? null : <img src={selectedTree.tree_image_2} /> }<br></br>
+         { selectedTree.tree_image_3 === 'N/A' ? null : <img src={selectedTree.tree_image_3} /> }<br></br>
+         { selectedTree.tree_image_4 === 'N/A' ? null : <img src={selectedTree.tree_image_4} /> }<br></br>
       </section>
       <section>
       <p>📝 Attributes</p>
