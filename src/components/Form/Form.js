@@ -27,7 +27,7 @@ class Form extends Component {
                 data-cy='zip-code-entry'
                 value={this.state.zip}
                 name='zip'
-                placeholder='Enter 5-digit Zip Code'
+                placeholder='Enter 5-Digit Zip Code'
                 pattern='[0-9]{5}'
                 onChange={event => this.handleChange(event)}
                 required

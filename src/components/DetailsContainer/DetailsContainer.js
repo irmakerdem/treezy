@@ -31,7 +31,7 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
         <p>{`☀️ Sun Preference: ${selectedTree.sun_preference}`}</p><br></br>
         <p>{`🪴 Soil Preference: ${selectedTree.soil_preference}`}</p><br></br>
         <p>{`🐢 Growth Speed: ${selectedTree.growth_speed}`}</p><br></br>
-        <p>{`📏 Mature Height: ${selectedTree.mature_height}`}</p><br></br>
+        <p>{`🪜 Mature Height: ${selectedTree.mature_height}`}</p><br></br>
         <p>{`🌳 Mature Spread: ${selectedTree.mature_speed}`}</p><br></br>
         <p>{`🌺 Flower Color: ${selectedTree.flower_color}`}</p><br></br>
         <p>{`🍃 Foliage Color: ${selectedTree.foliage_color}`}</p><br></br>
