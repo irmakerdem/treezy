@@ -52,6 +52,12 @@ class App extends Component {
 //
   }
 
+  clearZipTrees = () => {
+    this.setState({
+      selectedTree: '',
+      selectedZip: ''
+    })
+  }
 
   componentDidMount = () => {
     getTrees() 
@@ -71,7 +77,7 @@ class App extends Component {
     // console.log(page, "PAGE71")
     return (
       <>
-        <Header />
+        <Header clearZipTrees={this.clearZipTrees}/>
         <Switch>
           {/* <Route exact path='/' render={() => <Home changeZipCode={this.changeZipCode}/>}/> */}
           <Route exact path="/">
