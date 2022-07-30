@@ -20,21 +20,23 @@ class App extends Component {
     }
   }
   
-  changeZipCode = (zip , event) => {
-    event.preventDefault()
+  changeZipCode = (zip) => {
+    // event.preventDefault();
+    
     this.setState({
       selectedZip : zip
     })
-    this.filterTrees(zip)
+    this.filterTrees(zip);
+    
   }
 
-  filterTrees = (zippy) => {
-    let matchZip = this.state.allZipCodes.find(zip => zip.zip_code === zippy);
-    let treeList = this.state.allTrees.filter(tree => tree.growing_zone === matchZip.growing_zone)
-      this.setState({
-        filteredTrees : treeList
-      })
-  }
+  // filterTrees = (zippy) => {
+  //   let matchZip = this.state.allZipCodes.find(zip => zip.zip_code === zippy);
+  //   let treeList = this.state.allTrees.filter(tree => tree.growing_zone === matchZip.growing_zone)
+  //     this.setState({
+  //       filteredTrees : treeList
+  //     })
+  // }
 
   changeSelectedTree = (idt) => {
     console.log('id tree',idt)
@@ -80,32 +82,22 @@ class App extends Component {
     })
   }
   
-
-
   render() {
     console.log('SELECTED TREE AT THE ACTUAL END', this.state.selectedTree)
-    // const page = this.state.selectedZip && this.state.selectedTree ? '/details' : '/result' 
-    // page = selectedTree ? '/details' : '/result'
-    // console.log(page, "PAGE71")
+    
     return (
       <>
         <Header clearZipTrees={this.clearZipTrees}/>
         <Switch>
-          <Route exact path="/">
-	          {this.state.selectedZip ? <Redirect to="/result" /> : <Home changeZipCode={this.changeZipCode}/>}
-          </Route>;
-          <Route exact path="/result">
-	          {this.state.selectedTree ? <Redirect to="/trees/:id" /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree} clearZipTrees={this.clearZipTrees}/>}
-          </Route>; 
+          <Route exact path="/result" render={(location ) => {
+            {console.log(location.location.state.zip, "<<< location.location.state.zip");}
+            // {this.state.selectedZip ? this.changeZipCode(this.state.selectedZip) : this.changeZipCode(location.location.state.zip);}
+            return <SearchResult zip={location.location.state.zip} allZipCodes={this.state.allZipCodes} changeZipCode={this.changeZipCode} allTrees={this.state.allTrees} changeSelectedTree={this.changeSelectedTree} clearZipTrees={this.clearZipTrees}/>} 
+          }/>
           <Route
-          exact path='/trees/:id'
-          render={({ match }) => {
-            // {this.viewTree(match.params.id)}
-            {console.log('matchparams',match.params.id)}
-            {console.log('selectedTree 105',this.state.selectedTree)}
-            return <DetailsContainer match={match.params.id} trees={this.state.allTrees} selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>    
-          }  } />
-          {/* <Route path='/trees/:id' render={() => <DetailsContainer selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>}/> */}
+            path='/:id'
+            render={({ match }) => <DetailsContainer match={match.params.id} trees={this.state.allTrees} selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>}/>
+          <Route exact path="/" render={() => <Home selectedTree={this.state.selectedTree} changeZipCode={this.changeZipCode}/>} />
           <Route path='/*' render={()=> <Error />}/>
         </Switch>
       </>

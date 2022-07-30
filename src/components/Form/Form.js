@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 
 class Form extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             zip: ''
         }
@@ -32,13 +32,19 @@ class Form extends Component {
                 onChange={event => this.handleChange(event)}
                 required
             />
-            {/* <Link to='/result'> */}
+            <Link to={{
+                pathname: '/result',
+                state: {
+                    tree: this.props.selectedTree, 
+                    zip: this.state.zip
+                }
+            }}>
             <input
                 type='submit'
                 value='GO!'
                 data-cy='go-button'
             />
-            {/* </Link> */}
+            </Link>
         </form>
     )
 }

@@ -13,21 +13,21 @@ class DetailsContainer extends Component {
      }
    }
 
-   // componentDidMount = () => {
-   //    getTrees() 
-   //    .then(data => this.setState({ trees : data}))
-   //    this.viewTree();
-   // }
+   componentDidMount = () => {
+      getTrees() 
+      .then(data => this.setState({ trees : data}))
+      this.viewTree();
+   }
 
-   // viewTree = () => {
-   //    if(!this.props.selectedTree) {
-   //       console.log('Hit line 26 of details container');
-   //       console.log('this.state.trees', this.state.trees);
-   //       this.setState({myTree: this.state.trees[this.props.match.params.id -1]});
-   //    } 
+   viewTree = () => {
+      if(!this.props.selectedTree) {
+         console.log('Hit line 26 of details container');
+         console.log('this.state.trees', this.state.trees);
+         this.setState({myTree: this.state.trees[this.props.match.params.id -1]});
+      } 
 
-   //    console.log(this.state.myTree);
-   // }
+      console.log(this.state.myTree);
+   }
 
    render() {
 
