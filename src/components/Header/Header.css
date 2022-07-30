@@ -1,0 +1,12 @@
+h1 {
+  font-size: 500%;
+}
+
+.header-link {
+  text-decoration: none;
+  text-shadow: 0.2em 0.2em #e7737f;
+}
+
+a {
+  color: black;
+}

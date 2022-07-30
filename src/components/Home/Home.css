@@ -1,0 +1,38 @@
+.main-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left-container {
+ border: 0.2em solid rgb(83, 17, 17);;
+ background-color: rgb(24, 94, 20);
+}
+
+.right-container {
+  border: 0.2em solid green;
+  background-color: rgb(83, 17, 17);
+}
+
+.home-header {
+  font-size: 2em;
+  margin: 1.25em;
+  background-color: rgb(24, 94, 20);
+}
+
+.instructions {
+  margin-right: 2.5em;
+  margin-left: 2.5em;
+  background-color: rgb(24, 94, 20);
+  font-size: 1.4em;
+}
+
+.jungle {
+  margin-top: 5em;
+  height: 50vh;
+  width: 100vw;
+  opacity: 60%;
+}
+
+.home-page {
+  overflow: hidden;
+}

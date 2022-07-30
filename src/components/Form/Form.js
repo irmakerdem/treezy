@@ -20,7 +20,7 @@ class Form extends Component {
     render() {
     return (
         <form onSubmit={(event) => this.props.changeZipCode(this.state.zip, event)}>
-            <p>Zip Code:</p>
+            <p className="zip">Zip Code:</p>
             <input
                 className='zip-code-entry'
                 type='text'
@@ -34,6 +34,7 @@ class Form extends Component {
             />
             {/* <Link to='/result'> */}
             <input
+                // className="button"
                 type='submit'
                 value='GO!'
                 data-cy='go-button'

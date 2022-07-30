@@ -1,0 +1,13 @@
+img {
+  height: 20em;
+  width: 20em;
+}
+
+.card {
+  margin-top: 3em;
+}
+
+.tree-name {
+  font-weight: 700;
+  font-size: 1.3em;
+}

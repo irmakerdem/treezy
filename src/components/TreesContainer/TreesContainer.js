@@ -16,7 +16,7 @@ const TreesContainer = ({filteredTrees, changeSelectedTree}) => {
     })
         return (
         <>
-        <div>{resultsList}</div>
+        <div className="trees-container">{resultsList}</div>
         </>
     )
 }

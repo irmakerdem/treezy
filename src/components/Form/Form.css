@@ -1,3 +1,25 @@
-.zip-code-entry {
-    width: 20vw;
+input {
+    margin: 1.25em;
+    font-size: 1.4em;
 }
+
+.zip {
+    font-weight: bold;
+    font-size: 2em;
+    /* margin-bottom: 0em; */
+    margin-top: 1.25em;
+    background-color: rgb(83, 17, 17);
+}
+
+.main-wrapper {
+    /* width: 25%; */
+}
+
+form {
+    background-color: rgb(83, 17, 17);
+}
+
+.right-container, .left-container {
+    width: 30%;
+}
+
