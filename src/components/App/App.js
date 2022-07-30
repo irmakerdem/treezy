@@ -103,7 +103,7 @@ class App extends Component {
             // {this.viewTree(match.params.id)}
             {console.log('matchparams',match.params.id)}
             {console.log('selectedTree 105',this.state.selectedTree)}
-            return <DetailsContainer selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>    
+            return <DetailsContainer match={match.params.id} trees={this.state.allTrees} selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>    
           }  } />
           {/* <Route path='/trees/:id' render={() => <DetailsContainer selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>}/> */}
           <Route path='/*' render={()=> <Error />}/>
