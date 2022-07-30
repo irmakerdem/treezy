@@ -34,6 +34,7 @@ class Form extends Component {
             />
             <Link to={{
                 pathname: '/result',
+                search: `?code=${this.state.zip}`,
                 state: {
                     tree: this.props.selectedTree, 
                     zip: this.state.zip

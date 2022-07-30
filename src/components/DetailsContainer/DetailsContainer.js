@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './DetailsContainer.css';
 import arrow from '../../assets/arrow.png';
 import { Link } from 'react-router-dom';
-import { getTrees } from '../../apiCalls';
+import { getTrees, getSingleTree } from '../../apiCalls';
 
 class DetailsContainer extends Component {
    constructor(props) {
@@ -14,25 +14,31 @@ class DetailsContainer extends Component {
    }
 
    componentDidMount = () => {
-      getTrees() 
-      .then(data => this.setState({ trees : data}))
-      this.viewTree();
+      console.log('HELLO THIS.PROPS',this.props)
+      getSingleTree(this.props.match)
+      .then(data => {
+         console.log('data',data)
+      this.setState({ myTree : data})
+})
    }
+      // this.viewTree();
+   
 
-   viewTree = () => {
-      if(!this.props.selectedTree) {
-         console.log('Hit line 26 of details container');
-         console.log('this.state.trees', this.state.trees);
-         this.setState({myTree: this.state.trees[this.props.match.params.id -1]});
-      } 
+   // viewTree = () => {
+   //    if(!this.props.selectedTree) {
+   //       console.log('Hit line 26 of details container');
+   //       console.log('this.state.trees', this.state.trees);
+   //       this.setState({myTree: this.state.trees[this.props.match.params.id -1]});
+   //    } 
 
-      console.log(this.state.myTree);
-   }
+   //    console.log(this.state.myTree);
+   // }
 
    render() {
 
       console.log('mytree', this.state.myTree);
       console.log('trees', this.state.trees);
+      console.log('PROPS', this.props)
       window.scrollTo(0, 0)
 
       const createHTML = () => {

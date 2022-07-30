@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './SearchResult.css';
 import TreesContainer from "../TreesContainer/TreesContainer";
 import arrow from '../../assets/arrow.png';
@@ -22,8 +22,9 @@ const SearchResult = ({zip, changeZipCode, allZipCodes, allTrees, changeSelected
         setFilteredTrees([...treeList]);
         console.log(filteredTrees, '<<< filteredTrees')
     }
-    
+    useEffect(() => {
     filterTrees();
+    },[])
 
     
     window.scrollTo(0,0)

@@ -7,7 +7,7 @@ const Card = ({id, name, mainImage, growingZone, changeSelectedTree}) => {
     return (
         <>
         <p>{name}</p>
-        <Link to={'trees/' + id}>
+        <Link to={'/' + id}>
             <img src={mainImage} id={id} onClick={() => changeSelectedTree(id)}></img>
         </Link>
         </>
