@@ -16,7 +16,8 @@ class App extends Component {
       allZipCodes: [],
       selectedZip: '',
       filteredTrees: [], 
-      selectedTree: ''
+      selectedTree: '',
+      city: ''
     }
   }
   
@@ -32,7 +33,8 @@ class App extends Component {
     let matchZip = this.state.allZipCodes.find(zip => zip.zip_code === zippy);
     let treeList = this.state.allTrees.filter(tree => tree.growing_zone === matchZip.growing_zone)
       this.setState({
-        filteredTrees : treeList
+        filteredTrees : treeList,
+        city: matchZip.city
       })
   }
 
@@ -84,7 +86,7 @@ class App extends Component {
           </Route>;
           <Route 
             exact path='/result'>
-	          {this.state.selectedTree ? <Redirect to='/trees/:id' /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree} clearZipTrees={this.clearZipTrees}/>}
+	          {this.state.selectedTree ? <Redirect to='/trees/:id' /> : <SearchResult city={this.state.city} filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree} clearZipTrees={this.clearZipTrees}/>}
           </Route>; 
           <Route 
             exact path='/trees/:id' 
