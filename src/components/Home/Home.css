@@ -1,6 +1,7 @@
 .main-wrapper {
   display: flex;
   justify-content: space-evenly;
+  overflow-x: hidden;
 }
 
 .left-container {

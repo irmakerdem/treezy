@@ -1,11 +1,11 @@
 import React from "react";
 import './DetailsContainer.css';
-import arrow from '../../assets/arrow.png';
+import woodenArrow from '../../assets/wooden-arrow.png';
 import { Link } from 'react-router-dom';
 
 const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
 
-   console.log('details container selected tree',selectedTree)
+   window.scroll(0,0);
 
    const createHTML = () => {
       return {__html: selectedTree.overview_description};
@@ -22,10 +22,10 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
                   { selectedTree.main_tree_image === 'N/A' ? null : <img src={selectedTree.main_tree_image}  /> }
                </div>
                <div className="small-images">
-                  { selectedTree.tree_image_1 === 'N/A' ? null : <img src={selectedTree.tree_image_1} /> }<br></br>
-                  { selectedTree.tree_image_2 === 'N/A' ? null : <img src={selectedTree.tree_image_2} /> }<br></br>
-                  { selectedTree.tree_image_3 === 'N/A' ? null : <img src={selectedTree.tree_image_3} /> }<br></br>
-                  { selectedTree.tree_image_4 === 'N/A' ? null : <img src={selectedTree.tree_image_4} /> }<br></br>
+                  { selectedTree.tree_image_1 === 'N/A' ? <p className="hidden"></p> : <img src={selectedTree.tree_image_1} /> }
+                  { selectedTree.tree_image_2 === 'N/A' ? <p className="hidden"></p> : <img src={selectedTree.tree_image_2} /> }
+                  { selectedTree.tree_image_3 === 'N/A' ? <p className="hidden"></p> : <img src={selectedTree.tree_image_3} /> }
+                  { selectedTree.tree_image_4 === 'N/A' ? <p className="hidden"></p> : <img src={selectedTree.tree_image_4} /> }
                </div>
             </section>
          </div>
@@ -46,11 +46,11 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
                <p className="about-this-tree">{`🌺 Flower Color: ${selectedTree.flower_color} 🌺`}</p>
                <p className="about-this-tree">{`🍃 Foliage Color: ${selectedTree.foliage_color} 🍃`}</p>
                <p className="about-this-tree">{`🍂 Fall Color: ${selectedTree.fall_color} 🍂`}</p>
-               <p className="about-this-tree">{`🐝 Pollinator Friendly: ${selectedTree.pollinator_friendly} 🐝`}</p><br></br>
-               <a className="about-this-tree" href={selectedTree.outgoing_link}>Find more info at Nature Hills</a><br></br>
+               <p className="about-this-tree">{`🐝 Pollinator Friendly: ${selectedTree.pollinator_friendly} 🐝`}</p><br></br><br></br>
+               <p className="about-this-tree">Find more info at <a className="about-this-tree nature-link" href={selectedTree.outgoing_link}>Nature Hills</a></p>
             </section>
             <Link to='/result'>
-               <img src={arrow} alt='black arrow pointing to the left' onClick={() => clearSelectedTree()}></img>
+               <img src={woodenArrow} alt='wooden arrow pointing to the left' onClick={() => clearSelectedTree()}></img>
             </Link>
          </div>
        </>

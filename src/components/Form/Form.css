@@ -11,11 +11,8 @@ input {
     background-color: rgb(83, 17, 17);
 }
 
-.main-wrapper {
-    /* width: 25%; */
-}
-
 form {
+    text-align: center;
     background-color: rgb(83, 17, 17);
 }
 
