@@ -7,9 +7,7 @@ import colorado from '../../assets/colorado-flag.webp';
 const DetailsContainer = ({selectedTree, clearSelectedTree, clearZipTrees}) => {
   window.scroll(0,0);
 
-  const createHTML = () => {
-    return {__html: selectedTree.overview_description};
-  }
+
 
   return (
     <>
@@ -36,9 +34,18 @@ const DetailsContainer = ({selectedTree, clearSelectedTree, clearZipTrees}) => {
               </div>
             </section>
           </div>
+        <div className='details-wrapper'>
           <div className='details-middle'>
-            <p className='attributes-title'>Attributes</p><br></br>
-            <p className='bullets' dangerouslySetInnerHTML={ createHTML() } />
+            <p className='attributes-title'>Attributes</p>
+            <ul>
+              <li>{selectedTree.descrip1}</li>
+              <li>{selectedTree.descrip2}</li>
+              <li>{selectedTree.descrip3}</li>
+              <li>{selectedTree.descrip4}</li>
+              <li>{selectedTree.descrip5}</li>
+              <li>{selectedTree.descrip6}</li>
+            </ul>
+          </div>
           </div>
           <div className='details-bottom'>
             <section className='more-about'>

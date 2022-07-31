@@ -82,12 +82,11 @@
 }
 
 .results-top {
-  padding-top: 0.5em;
-  padding-bottom: 2em;
-  width: 40vw;
+  padding: 0.5% 2% 2.5% 1.5%;
   color: white;
   background-color: #22577A;
   margin: 0 auto;
   border: 0.2em solid #22577A;
   border-radius: 0.5em;
+  display: inline-block;
 }
