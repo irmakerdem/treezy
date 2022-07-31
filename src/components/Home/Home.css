@@ -1,44 +1,45 @@
-.main-wrapper {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+
+.main-container {
   display: flex;
-  justify-content: space-evenly;
-  overflow-x: hidden;
+  margin: auto auto;
+  width: 30%;
+  /* background-color: #22577A; */
+  border-radius: 50%;
 }
 
-.left-container {
- border: 0.2em solid black;
-  /* background-color: #80ED99; */
-    background-color: #C7F9CC;
-}
-
-.right-container {
-  border: 0.2em solid black;
-  background-color: #22577A;
-}
-
-.home-header {
-  font-size: 2em;
-  margin: 1.25em;
-  background-color: #C7F9CC;
-}
-
-.instructions {
-  margin-right: 2.5em;
-  margin-left: 2.5em;
-  background-color: #C7F9CC;
-  font-size: 1.4em;
-}
-
-.jungle {
-  margin-top: 5em;
-  height: 50vh;
-  width: 100vw;
-  opacity: 60%;
-}
-
-.home-page {
+.image-box {
+  background: var(--image-url) center center;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
-input {
-  border: 2px solid black;
+.home-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: linear-gradient(to right,
+	rgba(199.5, 220.5, 220.5, .85) 150px, rgba(200, 221, 221, 0.95) 100%);
+}
+
+.made-in {
+  font-size: 1.25em;
+  margin-top: 0em;
+  padding-left: 49em;
+  margin-bottom: 2em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.colorado {
+  height: 6vh;
+  width: 5vw;
+  padding-left: 65em;
+  padding-top: 4em;
 }

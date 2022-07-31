@@ -2,6 +2,7 @@ import React from "react";
 import './DetailsContainer.css';
 import woodenArrow from '../../assets/wooden-arrow.png';
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
 
 const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
 
@@ -13,6 +14,7 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
 
     return (
        <>
+         <Header />
          <div className="details-top">
             <h2 className="tree-title">{`${selectedTree.tree_name}`}</h2>
             <p className="botanical">{`Botanical Name: `} <i>{`${selectedTree.botanical_name}`}</i></p>
@@ -30,10 +32,8 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
             </section>
          </div>
          <div className="details-middle">
-            {/* <section className="attributes-container"> */}
                <p className="attributes-title">Attributes</p>
                <p className="bullets" dangerouslySetInnerHTML={ createHTML() } />
-            {/* </section> */}
          </div>
          <div className="details-bottom">
             <section className="more-about">

@@ -1,8 +1,8 @@
-img {
+.tree-image {
   height: 20em;
   width: 20em;
   border-radius: 6%;
-  border: 0.2em solid black;
+  border: 0.5em solid #22577A;
 }
 
 .card {

@@ -1,54 +1,58 @@
-input {
-    margin: 1.25em;
-    font-size: 1.4em;
-    margin-top: 0.4em;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
 
-.zip {
-    font-weight: bold;
-    color: #C7F9CC;
-    font-size: 2em;
-    margin-top: 1.25em;
-    background-color: #22577A;
+input {
+  margin: 1.25em;
+  font-size: 1.4em;
+  margin-top: 0.4em;
+  border: 2px solid black;
 }
 
 form {
-    text-align: center;
-    background-color: #22577A;
-}
-
-.right-container, .left-container {
-    width: 30%;
+  text-align: center;
+  background-color: #22577A;
+  width: 150vw;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .btn {
-    width: 5em;
-    height: 2em;
-    margin: 1em;
-    margin-top: 0.3em;
-    border-radius: 0.3em 1.3em;
-    border-color: rgb(46, 204, 113);
-    transition: all .2s ease;
-    box-sizing: border-box;
-    text-align: center;
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-top: 0.8em;
-    padding-bottom: 1.8em;
-    overflow: hidden;
-  } 
+  width: 5em;
+  height: 2em;
+  margin: 1em;
+  margin-top: 0.3em;
+  border-radius: 0.3em 1.3em;
+  border: 0.25em solid #a0e000;
+  transition: all .2s ease;
+  text-align: center;
+  color: #a0e000;
+  background-color: rgb(91, 86, 86);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-top: 0.8em;
+  padding-bottom: 1.8em;
+  overflow: hidden;
+} 
   
-  .btn:hover {
-    border-radius: 1.3em 0.3em;
-    background: rgb(46, 204, 113);
-    cursor: pointer;
-  }
+.btn:hover {
+  border-radius: 1.3em 0.3em;
+  background: rgb(46, 204, 113);
+  cursor: pointer;
+}
 
-  .zip-code-entry {
-    background: white;
-    width: 70%;
-    padding: 0.5em;
-    text-align: center;
-  }
+.zip-code-entry {
+  font-family: 'Montserrat', sans-serif;
+  background: white;
+  width: 55%;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 2em;
+}
+
+.welcome {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.my-form {
+  border-radius: 2.5%;
+}

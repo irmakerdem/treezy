@@ -7,6 +7,7 @@ import Home from '../Home/Home';
 import { getTrees, getZip } from '../../apiCalls';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Error from '../Error/Error';
+// import canopy from '../../assets/canopy.jpeg';
 
 class App extends Component {
   constructor() {
@@ -83,7 +84,9 @@ class App extends Component {
     // console.log(page, "PAGE71")
     return (
       <>
-        <Header clearZipTrees={this.clearZipTrees}/>
+        {/* <div className="my-canopy" style={{backgroundImage: `url(${canopy})`}}></div> */}
+
+        {/* <Header clearZipTrees={this.clearZipTrees}/> */}
         <Switch>
           {/* <Route exact path='/' render={() => <Home changeZipCode={this.changeZipCode}/>}/> */}
           <Route exact path="/">

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './Form.css';
-import { Link } from 'react-router-dom';
-
 
 class Form extends Component {
     constructor() {
@@ -18,31 +16,31 @@ class Form extends Component {
     }
 
     render() {
-    return (
-        <form onSubmit={(event) => this.props.changeZipCode(this.state.zip, event)}>
-            <p className="zip">Zip Code:</p>
-            <input
-                className='zip-code-entry'
-                type='text'
-                data-cy='zip-code-entry'
-                value={this.state.zip}
-                name='zip'
-                placeholder='Enter 5-Digit CO Zip Code'
-                pattern='[0-9]{5}'
-                onChange={event => this.handleChange(event)}
-                required
-            />
-            {/* <Link to='/result'> */}
-            <br></br>
-            <input
-                className="btn"
-                type='submit'
-                value='GO!'
-                data-cy='go-button'
-            />
-            {/* </Link> */}
-        </form>
-    )
+        return (
+            <form className="my-form" onSubmit={(event) => this.props.changeZipCode(this.state.zip, event)}>
+                <p className="welcome">WELCOME TO TREEZY!</p>
+                <p>Enter your CO zip code to view tree species best suited for your area.</p>
+                    <input
+                        className='zip-code-entry'
+                        type='text'
+                        data-cy='zip-code-entry'
+                        value={this.state.zip}
+                        name='zip'
+                        placeholder='Enter 5-Digit CO Zip Code'
+                        pattern='[0-9]{5}'
+                        onChange={event => this.handleChange(event)}
+                        required
+                    />
+                    <br></br>
+                    <input
+                        className="btn"
+                        type='submit'
+                        value='GO!'
+                        data-cy='go-button'
+                    />
+            </form>
+        )
+    }
 }
-}
+
 export default Form;
