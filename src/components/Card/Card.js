@@ -7,7 +7,7 @@ const Card = ({ id, name, mainImage, changeSelectedTree }) => {
     <div className='card'>
       <p className='tree-name'>{name}</p>
         <Link to={'trees/' + id}>
-          <img className='tree-image' src={mainImage} id={id} onClick={() => changeSelectedTree(id)}></img>
+          <img className='tree-image' src={mainImage} id={id} alt={`${name} photo`} onClick={() => changeSelectedTree(id)}></img>
         </Link>
     </div>
     )

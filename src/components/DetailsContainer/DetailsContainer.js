@@ -26,13 +26,13 @@ const DetailsContainer = ({selectedTree, clearSelectedTree, clearZipTrees}) => {
             </div>
             <section className='detail-images'>
               <div className='main-image'>
-                { selectedTree.main_tree_image === 'N/A' ? null : <img className='detail-page-image' src={selectedTree.main_tree_image}  /> }
+                { selectedTree.main_tree_image === 'N/A' ? null : <img className='detail-page-image' alt={`${selectedTree.tree_name} photo`} src={selectedTree.main_tree_image}  /> }
               </div>
               <div className='small-images'>
-                { selectedTree.tree_image_1 === 'N/A' ? <p className='hidden'></p> : <img className='detail-page-image' src={selectedTree.tree_image_1} /> }
-                { selectedTree.tree_image_2 === 'N/A' ? <p className='hidden'></p> : <img className='detail-page-image' src={selectedTree.tree_image_2} /> }
-                { selectedTree.tree_image_3 === 'N/A' ? <p className='hidden'></p> : <img className='detail-page-image' src={selectedTree.tree_image_3} /> }
-                { selectedTree.tree_image_4 === 'N/A' ? <p className='hidden'></p> : <img className='detail-page-image' src={selectedTree.tree_image_4} /> }
+                { selectedTree.tree_image_1 === 'N/A' ? <p className='hidden'></p> : <img className='detail-page-image' alt={`${selectedTree.tree_name} photo`} src={selectedTree.tree_image_1} /> }
+                { selectedTree.tree_image_2 === 'N/A' ? <p className='hidden'></p> : <img className='detail-page-image' alt={`${selectedTree.tree_name} photo`} src={selectedTree.tree_image_2} /> }
+                { selectedTree.tree_image_3 === 'N/A' ? <p className='hidden'></p> : <img className='detail-page-image' alt={`${selectedTree.tree_name} photo`} src={selectedTree.tree_image_3} /> }
+                { selectedTree.tree_image_4 === 'N/A' ? <p className='hidden'></p> : <img className='detail-page-image' alt={`${selectedTree.tree_name} photo`} src={selectedTree.tree_image_4} /> }
               </div>
             </section>
           </div>
@@ -65,7 +65,7 @@ const DetailsContainer = ({selectedTree, clearSelectedTree, clearZipTrees}) => {
               />
             </Link>
             <br></br>
-            <img className='colorado3' src={colorado}></img>
+            <img className='colorado3' alt='flag of Colorado' src={colorado}></img>
             <p className='made3-in'>Made in and for CO</p>
           </div>
         </div>

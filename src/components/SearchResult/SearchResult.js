@@ -7,7 +7,7 @@ import Header from '../Header/Header';
 
 const SearchResult = ({ filteredTrees, changeSelectedTree, clearZipTrees, city }) => {
   window.scroll(0,0);
-  
+
   return (
     <>
       <div className='image2-box' style={{ backgroundImage: `url(https://photoeverywhere.co.uk/britain/dorset/trees.JPG)` }}>
@@ -31,7 +31,7 @@ const SearchResult = ({ filteredTrees, changeSelectedTree, clearZipTrees, city }
               />
             </Link>
             <br></br>
-            <img className='colorado2' src={colorado}></img>
+            <img className='colorado2' alt='flag of Colorado' src={colorado}></img>
             <p className='made2-in'>Made in and for CO</p>
           </div>
         </div>
