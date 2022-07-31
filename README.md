@@ -30,7 +30,7 @@ Front-end: We used React and it's libraries including Hooks and Router. We E2E t
 * Create an API
 * Create a database
 * Deploy an API
-* Create a dashboard that is easy to use and displays information in a clear way on multiple pages and screens
+* Create a dashboard that is easy to use and displays information in a clear way on multiple screens
 * Write modular, reusable components, and create a single-page application that simulates multiple pages using Router and conditional rendering
 * Implement a robust testing suite using Cypress
 * Make network requests to our API endpoints to retrieve and manipulate data
