@@ -1,0 +1,41 @@
+.small-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.attributes-title {
+  font-weight: 600;
+  font-size: 2em;
+  text-align: center;
+  background-color: rgb(255, 0, 247);
+}
+
+.details-middle {
+  border: 0.2em solid green;
+  width: 40em;
+  margin: 0 auto;
+  background-color: rgb(255, 0, 247);
+  margin-top: 50px;
+}
+
+.details-top, .details-bottom {
+  text-align: center;
+}
+
+ul, li {
+  background-color: rgb(255, 0, 247);
+}
+
+.more-about {
+  border: 0.2em solid green;
+  width: 30em;
+  margin: 0 auto;
+  background-color: rgb(255, 0, 247);
+  margin-top: 50px;
+}
+
+.about-this-tree {
+  background-color: rgb(255, 0, 247);
+}

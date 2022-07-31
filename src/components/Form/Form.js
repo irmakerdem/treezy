@@ -33,8 +33,9 @@ class Form extends Component {
                 required
             />
             {/* <Link to='/result'> */}
+            <br></br>
             <input
-                // className="button"
+                className="btn"
                 type='submit'
                 value='GO!'
                 data-cy='go-button'
