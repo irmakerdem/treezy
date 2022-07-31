@@ -89,5 +89,7 @@
   color: white;
   background-color: #22577A;
   margin: 0 auto;
-  border-radius: 0.4em;
+  border: 0.2em solid #22577A;
+  border-radius: 0.5em;
+  /* border-radius: 0.4em; */
 }

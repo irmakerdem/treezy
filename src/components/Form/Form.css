@@ -12,6 +12,8 @@ form {
   background-color: #22577A;
   width: 150vw;
   font-family: 'Montserrat', sans-serif;
+  border: 0.2em solid #22577A;
+  border-radius: 0.5em;
 }
 
 .btn {
@@ -53,6 +55,6 @@ form {
   font-weight: bolder;
 }
 
-.my-form {
+/* .my-form {
   border-radius: 2.5%;
-}
+} */

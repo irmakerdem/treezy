@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&display=swap');
+
 .small-images {
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +40,8 @@ ul, li, b {
 }
 
 .more-about {
-  border: 0.2em solid black;
+  border: 0.2em solid #22577A;
+  border-radius: 0.5em;
   width: 30em;
   margin: 0 auto;
   background-color: #22577A;
@@ -52,27 +55,28 @@ ul, li, b {
 
 .nature-link {
   margin-bottom: 1000px;
-  /* color: black; */
 }
 
 .hidden {
   display: none;
 }
 
-.wooden-image {
-  border: none;
-}
-
 .tree-title {
   font-size: 2.2em;
+  margin-bottom: -.4em;
 }
 
 .botanical {
-  font-size: 2em;
+  font-size: 1.5em;
+  font-weight: 200;
+  margin-bottom: -.4em;
 }
 
 .grow {
-  font-size: 1.9em;
+  font-size: 1.5em;
+  font-weight: 200;
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
 }
 
 .main-image {
@@ -89,4 +93,89 @@ ul, li, b {
 
 .ext-link {
   color: black;
+}
+
+.made3-in {
+  font-size: 1.25em;
+  margin-top: 0em;
+  padding-left: 0em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.colorado3 {
+  height: 6vh;
+  width: 5vw;
+  padding-left: 0em;
+  padding-top: 4em;
+}
+
+.leaf2 {
+  width: 5em;
+  height: 2em;
+  margin: 1em;
+  margin-top: 2em;
+  border-radius: 0.3em 1.3em;
+  border: 0.25em solid #a0e000;
+  transition: all .2s ease;
+  text-align: center;
+  color: #a0e000;
+  background-color: rgb(91, 86, 86);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-top: 0.8em;
+  padding-bottom: 1.8em;
+  overflow: hidden;
+} 
+  
+.leaf2:hover {
+  border-radius: 1.3em 0.3em;
+  background: rgb(46, 204, 113);
+  cursor: pointer;
+}
+
+.image3-box {
+  background: var(--image-url) center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color:#22577A;
+}
+
+.details-page {
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
+  width: 100vw;
+  background-image: linear-gradient(to right,
+	rgba(199.5, 220.5, 220.5, .85) 150px, rgba(200, 221, 221, 0.95) 100%);
+}
+
+.minih-left  {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
+  font-size: 0.5em;
+}
+
+.about-top {
+  padding-top: 0.5em;
+  padding-bottom: 2em;
+  width: 55vw;
+  color: white;
+  background-color: #22577A;
+  margin: 0 auto;
+  /* border-radius: 0.4em; */
+  border: 0.2em solid #22577A;
+  border-radius: 0.5em;
+}
+
+.detail-page-image {
+  height: 20em;
+  width: 20em;
+  border-radius: 6%;
+  border: 0.5em solid #22577A;
 }
