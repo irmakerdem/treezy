@@ -1,72 +1,116 @@
-# tree-pal
+# 🌳Treezy
 
-## Getting Started with Create React App
+Deployed Link Here
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Technologies and Tools](#technologies-and-tools)
+- [Project Reflections](#project-reflections)
+- [Roadmap](#roadmap)
+- [Setup](#setup)
+- [Contributors](#contributors)
+- [Resources](#resources)
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
 
-### `npm start`
+Treezy is an environmental application that allows a user to input their Colorado zip-code and see what trees they are able to grow in their respective growing/hardiness zone. The U.S. has 13 hardiness zones (Treezy currently uses 4 of these) which have different climate implications that determine what plant-life would thrive in a given area. Our goal is to inform our user of not only what kind of trees they could grow where they live, but also more information about those trees, such as their mature height, growing speed, foliage color, and more! 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Treezy is a full-stack application. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Back-end: We hand-rolled our data in Excel, and used Express for our server and PostgreSQL as our database, which we deployed to Heroku for easy access to our API's endpoints instead of running the API locally. 
 
-### `npm test`
+Front-end: We used React and it's libraries including Hooks and Router. We E2E tested Treezy using Cypress.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Learning Goals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Learn new technologies quickly
+* Create an API
+* Create a database
+* Deploy an API
+* Create a dashboard that is easy to use and displays information in a clear way on multiple pages and screens
+* Write modular, reusable components, and create a single-page application that simulates multiple pages using Router and conditional rendering
+* Implement a robust testing suite using Cypress
+* Make network requests to our API endpoints to retrieve and manipulate data
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies and Tools
 
-### `npm run eject`
+* Express
+* PostgreSQL
+* Heroku
+* JavaScript
+* React
+* HTML5
+* CSS3
+* Fetch API
+* Cypress
+* NPM
+* Webpack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Reflections
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Challenges
 
-## Learn More
+* We had to reset and reseed our database many times as we would later find out things were missing, not uniform, or difficult to work with
+* Refreshing the application would reset state, which would leave all data fields as undefined
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Wins
 
-### Code Splitting
+* Successfully seeded and deployed our databse
+* Created multiple endpoints for our API
+* Dynamically rendered our tree images as some trees had more/less images than others
+* Successfully filtered trees by growing zone and zip code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Future features could include:
 
-### Advanced Configuration
+* Adding more zip-codes to reach the rest of the country
+* Adding more trees to provide the user with more variety
+* Functionality to determine if a user has purchased a tree
+* Add more pages including pages to: browse all trees in the database, learn general information about trees, learn about trees postive environmental impact, and provide more in-depth information about tree care and planting (e.g., informing the user to call 811 prior to planting, where a certain tree should be strategically placed and more)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Setup
+1. _Fork_ and clone down this repository.
+2. Cd into the root directory and install dependencies by running `npm install`
+3. To run the server, use command `npm start` in the terminal. To stop the local server, use command `Control + C`. Closing the terminal without stopping the server first could allow the server to continue to run in the background and cause problems.
+4. While running `npm start` should automatically direct you, you can access the website by visiting http://localHost:3000/
+5. For more information about the API, visit [Treezy-API](https://github.com/irmakerdem/tree-pal-api)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributors
 
-### `npm run build` fails to minify
+**Irmak Erdem**
+* [LinkedIn](https://www.linkedin.com/in/irmakerdem/)
+* [GitHub](https://github.com/irmakerdem)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Betul Baskan**
+* [LinkedIn](https://www.linkedin.com/in/betul-baskan/)
+* [GitHub](https://github.com/Baskanbetul)
+
+**Rachel Bock**
+* [LinkedIn](https://www.linkedin.com/in/rachelbock/)
+* [GitHub](https://github.com/rachel-bock)
+
+**Brandon Ainsworth**
+* [LinkedIn](https://www.linkedin.com/in/ainsworth-brandon/)
+* [GitHub](https://github.com/BrandonAinsworth)
+
+## Resources
+
+* [Stack Overflow](https://stackoverflow.com/)
+* [Covert CSV to SQL](https://www.convertcsv.com/csv-to-sql.htm)
+* [Tree Data - Nature Hills](https://www.naturehills.com/)
+* [Tania Rascia- Express Tutorial](https://www.taniarascia.com/node-express-postgresql-heroku/)
+* [Nick Ciliak - Button Inspiration](https://codepen.io/nickcil/pen/vErdeB)
+* [Artan Myrtolli- Mentor](https://github.com/artanmyrtolli)
+
