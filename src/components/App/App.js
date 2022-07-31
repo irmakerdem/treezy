@@ -40,7 +40,7 @@ class App extends Component {
 
   changeSelectedTree = (idt) => {
     let matchTree = this.state.filteredTrees.find(tree => {
-     return tree.id === idt})
+      return tree.id === idt})
     this.setState({
       selectedTree: matchTree
     })

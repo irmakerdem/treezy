@@ -6,6 +6,8 @@ import colorado from '../../assets/colorado-flag.webp';
 import Header from '../Header/Header';
 
 const SearchResult = ({ filteredTrees, changeSelectedTree, clearZipTrees, city }) => {
+  window.scroll(0,0);
+  
   return (
     <>
       <div className='image2-box' style={{ backgroundImage: `url(https://photoeverywhere.co.uk/britain/dorset/trees.JPG)` }}>
