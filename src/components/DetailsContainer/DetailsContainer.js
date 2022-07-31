@@ -15,7 +15,7 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
        <>
          <div className="details-top">
             <h2>{`${selectedTree.tree_name}`}</h2>
-            <p>{`Botanical Name: ${selectedTree.botanical_name}`}</p>
+            <p>{`Botanical Name: `} <i>{`${selectedTree.botanical_name}`}</i></p>
             <h3>{`Growing Zone: ${selectedTree.growing_zone}`}</h3>
             <section className='detail-images'>
                <div className="main-image">
