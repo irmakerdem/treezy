@@ -44,7 +44,6 @@
 .image2-box {
   background: var(--image-url) center center;
   background-size: cover;
-  /* color: white; */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -91,5 +90,4 @@
   margin: 0 auto;
   border: 0.2em solid #22577A;
   border-radius: 0.5em;
-  /* border-radius: 0.4em; */
 }

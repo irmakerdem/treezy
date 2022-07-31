@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import './TreesContainer.css';
 import Card from '../Card/Card';
 
 const TreesContainer = ({filteredTrees, changeSelectedTree}) => {
   const resultsList = filteredTrees.map(tree => {
-    return  (
+    return (
       <Card 
         key={tree.id}
         id={tree.id}
@@ -15,9 +15,10 @@ const TreesContainer = ({filteredTrees, changeSelectedTree}) => {
       />    
     )
   })
+  
   return (
-      <div className="trees-container">{resultsList}</div>
-    )
+    <div className='trees-container'>{resultsList}</div>
+  )
 }
 
 export default TreesContainer;

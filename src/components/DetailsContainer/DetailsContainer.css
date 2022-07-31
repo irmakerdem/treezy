@@ -146,9 +146,6 @@ ul, li, b {
 }
 
 .details-page {
-  /* display: flex; */
-  /* justify-content: space-evenly; */
-  /* align-items: center; */
   width: 100vw;
   background-image: linear-gradient(to right,
 	rgba(199.5, 220.5, 220.5, .85) 150px, rgba(200, 221, 221, 0.95) 100%);
@@ -168,7 +165,6 @@ ul, li, b {
   color: white;
   background-color: #22577A;
   margin: 0 auto;
-  /* border-radius: 0.4em; */
   border: 0.2em solid #22577A;
   border-radius: 0.5em;
 }
