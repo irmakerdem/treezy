@@ -77,9 +77,7 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <Header clearZipTrees={this.clearZipTrees}/> */}
         <Switch>
-          {/* <Route exact path='/' render={() => <Home changeZipCode={this.changeZipCode}/>}/> */}
           <Route 
             exact path='/'>
 	          {this.state.selectedZip ? <Redirect to='/result' /> : <Home changeZipCode={this.changeZipCode}/>}
@@ -91,6 +89,7 @@ class App extends Component {
           <Route 
             exact path='/trees/:id' 
             render={() => <DetailsContainer 
+            clearZipTrees={this.clearZipTrees}
             selectedTree={this.state.selectedTree} 
             clearSelectedTree={this.clearSelectedTree}/>}/>
           <Route 

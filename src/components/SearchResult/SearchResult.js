@@ -12,7 +12,7 @@ const SearchResult = ({ filteredTrees, changeSelectedTree, clearZipTrees, city }
         <div className='search-page'>
           <div className='search-results'>
             <div className='mini-left'>
-                <Header />
+                <Header clearZipTrees={clearZipTrees}/>
             </div>
             <div className='results-top'>
               <h2 className='best-trees'>{`${city}: Zone ${filteredTrees[0].growing_zone}`}</h2>

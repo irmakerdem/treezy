@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import colorado from '../../assets/colorado-flag.webp';
 
-const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
+const DetailsContainer = ({selectedTree, clearSelectedTree, clearZipTrees}) => {
   window.scroll(0,0);
 
   const createHTML = () => {
@@ -16,7 +16,7 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
       <div className='image3-box' style={{ backgroundImage: `url(https://photoeverywhere.co.uk/britain/dorset/trees.JPG)` }}>
         <div className='details-page'>  
           <div className='minih-left'>
-            <Header />
+            <Header clearZipTrees={clearZipTrees}/>
           </div>
           <div className='details-top'>
             <div className='about-top'>
