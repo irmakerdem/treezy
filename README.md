@@ -26,6 +26,8 @@ Front-end: We used React and it's libraries including Hooks and Router. We E2E t
 
 ## Learning Goals
 
+This Project is a part of Turing School of Software and Design's [Stretch Tech](https://frontend.turing.edu/projects/module-3/stretch.html)
+
 * Learn new technologies quickly
 * Create an API
 * Create a database
