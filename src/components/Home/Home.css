@@ -5,25 +5,26 @@
 }
 
 .left-container {
- border: 0.2em solid rgb(83, 17, 17);;
- background-color: rgb(24, 94, 20);
+ border: 0.2em solid black;
+  /* background-color: #80ED99; */
+    background-color: #C7F9CC;
 }
 
 .right-container {
-  border: 0.2em solid green;
-  background-color: rgb(83, 17, 17);
+  border: 0.2em solid black;
+  background-color: #22577A;
 }
 
 .home-header {
   font-size: 2em;
   margin: 1.25em;
-  background-color: rgb(24, 94, 20);
+  background-color: #C7F9CC;
 }
 
 .instructions {
   margin-right: 2.5em;
   margin-left: 2.5em;
-  background-color: rgb(24, 94, 20);
+  background-color: #C7F9CC;
   font-size: 1.4em;
 }
 
@@ -36,4 +37,8 @@
 
 .home-page {
   overflow: hidden;
+}
+
+input {
+  border: 2px solid black;
 }

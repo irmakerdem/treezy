@@ -6,14 +6,15 @@ input {
 
 .zip {
     font-weight: bold;
+    color: #C7F9CC;
     font-size: 2em;
     margin-top: 1.25em;
-    background-color: rgb(83, 17, 17);
+    background-color: #22577A;
 }
 
 form {
     text-align: center;
-    background-color: rgb(83, 17, 17);
+    background-color: #22577A;
 }
 
 .right-container, .left-container {
@@ -30,7 +31,8 @@ form {
     transition: all .2s ease;
     box-sizing: border-box;
     text-align: center;
-    color: rgb(236, 240, 241);
+    color: black;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding-top: 0.8em;
@@ -42,4 +44,11 @@ form {
     border-radius: 1.3em 0.3em;
     background: rgb(46, 204, 113);
     cursor: pointer;
+  }
+
+  .zip-code-entry {
+    background: white;
+    width: 70%;
+    padding: 0.5em;
+    text-align: center;
   }

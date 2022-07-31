@@ -7,16 +7,16 @@
 
 .attributes-title {
   font-weight: 600;
-  font-size: 2em;
+  font-size: 1.7em;
   text-align: center;
-  background-color: rgb(255, 0, 247);
+  background-color: #22577A;
 }
 
 .details-middle {
-  border: 0.2em solid green;
+  border: 0.2em solid black;
   width: 40em;
   margin: 0 auto;
-  background-color: rgb(255, 0, 247);
+  background-color: #22577A;
   margin-top: 50px;
 }
 
@@ -24,31 +24,69 @@
   text-align: center;
 }
 
+.details-middle, .details-bottom {
+  border-radius: 1.4%;
+  color: white
+}
+
 .details-top {
   font-weight: 600;
 }
 
-ul, li {
-  background-color: rgb(255, 0, 247);
+ul, li, b {
+  background-color: #22577A;
 }
 
 .more-about {
-  border: 0.2em solid green;
+  border: 0.2em solid black;
   width: 30em;
   margin: 0 auto;
-  background-color: rgb(255, 0, 247);
+  background-color: #22577A;
   margin-top: 50px;
   padding-bottom: 60px;
 }
 
 .about-this-tree {
-  background-color: rgb(255, 0, 247);
+  background-color: #22577A;
 }
 
 .nature-link {
   margin-bottom: 1000px;
+  /* color: black; */
 }
 
 .hidden {
   display: none;
+}
+
+.wooden-image {
+  border: none;
+}
+
+.tree-title {
+  font-size: 2.2em;
+}
+
+.botanical {
+  font-size: 2em;
+}
+
+.grow {
+  font-size: 1.9em;
+}
+
+.main-image {
+  margin-top: 7em;
+}
+
+.about {
+  font-size: 1.7em;
+}
+
+.bullets, .emojis, .ext-link {
+  font-size: 1.2em;
+}
+
+.ext-link {
+  color: black;
 }

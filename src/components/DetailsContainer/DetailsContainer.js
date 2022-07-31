@@ -14,9 +14,9 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
     return (
        <>
          <div className="details-top">
-            <h2>{`${selectedTree.tree_name}`}</h2>
-            <p>{`Botanical Name: `} <i>{`${selectedTree.botanical_name}`}</i></p>
-            <h3>{`Growing Zone: ${selectedTree.growing_zone}`}</h3>
+            <h2 className="tree-title">{`${selectedTree.tree_name}`}</h2>
+            <p className="botanical">{`Botanical Name: `} <i>{`${selectedTree.botanical_name}`}</i></p>
+            <h3 className="grow">{`Growing Zone: ${selectedTree.growing_zone}`}</h3>
             <section className='detail-images'>
                <div className="main-image">
                   { selectedTree.main_tree_image === 'N/A' ? null : <img src={selectedTree.main_tree_image}  /> }
@@ -31,26 +31,26 @@ const DetailsContainer = ({selectedTree, clearSelectedTree}) => {
          </div>
          <div className="details-middle">
             {/* <section className="attributes-container"> */}
-               <p className="attributes-title">📝 Attributes</p>
-               <p dangerouslySetInnerHTML={ createHTML() } />
+               <p className="attributes-title">Attributes</p>
+               <p className="bullets" dangerouslySetInnerHTML={ createHTML() } />
             {/* </section> */}
          </div>
          <div className="details-bottom">
             <section className="more-about">
-               <h4 className="about-this-tree">More About This Tree</h4>
-               <p className="about-this-tree">{`☀️ Sun Preference: ${selectedTree.sun_preference} ☀️`}</p>
-               <p className="about-this-tree">{`🪴 Soil Preference: ${selectedTree.soil_preference} 🪴`}</p>
-               <p className="about-this-tree">{`🐢 Growth Speed: ${selectedTree.growth_speed} 🐢`}</p>
-               <p className="about-this-tree">{`🪜 Mature Height: ${selectedTree.mature_height} 🪜`}</p>
-               <p className="about-this-tree">{`🌳 Mature Spread: ${selectedTree.mature_speed} 🌳`}</p>
-               <p className="about-this-tree">{`🌺 Flower Color: ${selectedTree.flower_color} 🌺`}</p>
-               <p className="about-this-tree">{`🍃 Foliage Color: ${selectedTree.foliage_color} 🍃`}</p>
-               <p className="about-this-tree">{`🍂 Fall Color: ${selectedTree.fall_color} 🍂`}</p>
-               <p className="about-this-tree">{`🐝 Pollinator Friendly: ${selectedTree.pollinator_friendly} 🐝`}</p><br></br><br></br>
-               <p className="about-this-tree">Find more info at <a className="about-this-tree nature-link" href={selectedTree.outgoing_link}>Nature Hills</a></p>
+               <h4 className="about-this-tree about">More About This Tree</h4>
+               <p className="about-this-tree emojis"><b>{`☀️ Sun Preference: `}</b>{`${selectedTree.sun_preference} ☀️`}</p>
+               <p className="about-this-tree emojis"><b>{`🪴 Soil Preference: `}</b>{`${selectedTree.soil_preference} 🪴`}</p>
+               <p className="about-this-tree emojis"><b>{`🐢 Growth Speed: `}</b>{`${selectedTree.growth_speed} 🐢`}</p>
+               <p className="about-this-tree emojis"><b>{`🪜 Mature Height: `}</b>{`${selectedTree.mature_height} 🪜`}</p>
+               <p className="about-this-tree emojis"><b>{`🌳 Mature Spread: `}</b>{`${selectedTree.mature_spread} 🌳`}</p>
+               <p className="about-this-tree emojis"><b>{`🌺 Flower Color: `}</b>{`${selectedTree.flower_color} 🌺`}</p>
+               <p className="about-this-tree emojis"><b>{`🍃 Foliage Color: `}</b>{`${selectedTree.foliage_color} 🍃`}</p>
+               <p className="about-this-tree emojis"><b>{`🍂 Fall Color: `}</b>{`${selectedTree.fall_color} 🍂`}</p>
+               <p className="about-this-tree emojis"><b>{`🐝 Pollinator Friendly: `}</b>{`${selectedTree.pollinator_friendly} 🐝`}</p><br></br><br></br>
+               <p className="about-this-tree ext-link">Find more info at <a className="about-this-tree nature-link" href={selectedTree.outgoing_link}>Nature Hills</a></p>
             </section>
             <Link to='/result'>
-               <img src={woodenArrow} alt='wooden arrow pointing to the left' onClick={() => clearSelectedTree()}></img>
+               <img className="wooden-arrow" src={woodenArrow} alt='wooden arrow pointing to the left' onClick={() => clearSelectedTree()}></img>
             </Link>
          </div>
        </>

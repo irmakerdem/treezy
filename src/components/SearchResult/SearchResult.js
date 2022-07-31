@@ -12,7 +12,7 @@ const SearchResult = ({filteredTrees, changeSelectedTree, clearZipTrees}) => {
             <h3 className="your-zone">{`Your Growing Zone: ${filteredTrees[0].growing_zone}`}</h3>
             <TreesContainer filteredTrees={filteredTrees} changeSelectedTree={changeSelectedTree}/>
             <Link to='/'>
-                <img src={woodenArrow} alt='wooden arrow pointing to the left' onClick={() => clearZipTrees()}></img>
+                <img className="wooden-arrow" src={woodenArrow} alt='wooden arrow pointing to the left' onClick={() => clearZipTrees()}></img>
             </Link>
        </div>
     )
