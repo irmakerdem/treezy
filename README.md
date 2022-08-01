@@ -68,7 +68,6 @@ This project is a part of Turing School of Software and Design's [Stretch Tech](
 * Dynamically rendered our tree images as some trees had more/less images than others
 * Successfully filtered trees by growing zone and zip code
 * We alotted time to research what we needed from the new technologies and implemented them in a timely and effective manner
-* We worked collaboratively on the entire project ❤️‍ 
 
 ## Roadmap
 
