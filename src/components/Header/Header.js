@@ -3,12 +3,13 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 
 const Header = ({clearZipTrees}) => {
-  return(
+  return (
     <Link className='header-link' to='/'>
       <h1 
         className='header' 
         data-cy='header'
-        onClick={() => clearZipTrees()}>🌳 Treezy</h1>
+        onClick={() => clearZipTrees()}>🌳 Treezy
+      </h1>
     </Link>
   )
 }

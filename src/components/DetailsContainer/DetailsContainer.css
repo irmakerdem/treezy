@@ -4,23 +4,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content:space-evenly;
-  margin-top: 50px;
+  margin-top: 3em;
 }
 
 .attributes-title {
   font-weight: 600;
-  font-size: 1.7em;
+  font-size: 1.5em;
   text-align: center;
   background-color: #22577A;
-}
-
-.details-middle {
-  border: 0.2em solid black;
-  margin: 0 auto;
-  background-color: #22577A;
-  margin-top: 50px;
-  display: inline-flex;
-  flex-direction: column;
 }
 
 .details-wrapper {
@@ -41,18 +32,15 @@
   font-weight: 600;
 }
 
-ul, li, b {
-  background-color: #22577A;
-}
-
 .more-about {
   border: 0.2em solid #22577A;
   border-radius: 0.5em;
   width: 30em;
   margin: 0 auto;
   background-color: #22577A;
-  margin-top: 50px;
-  padding-bottom: 60px;
+  margin-top: 3em;
+  padding-bottom: 3.5em;
+  display: inline-block;
 }
 
 .about-this-tree {
@@ -60,7 +48,6 @@ ul, li, b {
 }
 
 .nature-link {
-  margin-bottom: 1000px;
   color: white;
 }
 
@@ -69,19 +56,19 @@ ul, li, b {
 }
 
 .tree-title {
-  font-size: 2.2em;
+  font-size: 1.5em;
   margin-bottom: -.4em;
 }
 
 .botanical {
-  font-size: 1.5em;
-  font-weight: 200;
+  font-size: 1em;
+  font-weight: 400;
   margin-bottom: -.4em;
 }
 
 .grow {
-  font-size: 1.5em;
-  font-weight: 200;
+  font-size: 1em;
+  font-weight: 400;
   margin-top: 0.5em;
   margin-bottom: 0.1em;
 }
@@ -91,11 +78,11 @@ ul, li, b {
 }
 
 .about {
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 
 .bullets, .emojis, .ext-link {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .ext-link {
@@ -129,7 +116,7 @@ ul, li, b {
   background-color: rgb(91, 86, 86);
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   padding-top: 0.8em;
   padding-bottom: 1.8em;
   overflow: hidden;
@@ -155,7 +142,7 @@ ul, li, b {
 .details-page {
   width: 100vw;
   background-image: linear-gradient(to right,
-	rgba(199.5, 220.5, 220.5, .85) 150px, rgba(200, 221, 221, 0.95) 100%);
+	rgba(199.5, 220.5, 220.5, .85) 150px, rgba(199.5, 220.5, 220.5, .85) 100%);
 }
 
 .minih-left  {
@@ -166,14 +153,18 @@ ul, li, b {
 }
 
 .about-top {
-  padding-top: 0.5em;
-  padding-bottom: 2em;
-  width: 55vw;
+  background-color: #22577A;
+  margin: 0 auto;
+  border: 0.2em solid #22577A;
+  border-radius: 0.5em;
+  padding: 0.5% 3% 2% 3%;
   color: white;
   background-color: #22577A;
   margin: 0 auto;
   border: 0.2em solid #22577A;
   border-radius: 0.5em;
+  display: inline-block;
+  margin-bottom: -2em;
 }
 
 .detail-page-image {
@@ -183,3 +174,23 @@ ul, li, b {
   border: 0.5em solid #22577A;
 }
 
+.bullet-list {
+  margin-top: -0.5em;
+  margin-bottom: 2em;
+}
+
+.a-list {
+  margin-bottom: 1em;
+}
+
+.details-middle {
+  border: 0.2em solid #22577A;
+  border-radius: 0.5em;
+  margin: 0 auto;
+  background-color: #22577A;
+  margin-top: 50px;
+  display: inline-flex;
+  flex-direction: column;
+  padding-right: 3%;
+  padding-left: 2.5%;
+}

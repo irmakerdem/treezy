@@ -10,7 +10,7 @@ const Card = ({ id, name, mainImage, changeSelectedTree }) => {
           <img className='tree-image' src={mainImage} id={id} alt={`${name} photo`} onClick={() => changeSelectedTree(id)}></img>
         </Link>
     </div>
-    )
+  )
 }
 
 export default Card;
