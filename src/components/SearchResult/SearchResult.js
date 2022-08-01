@@ -1,20 +1,43 @@
-import React from "react";
+import React from 'react';
 import './SearchResult.css';
-import TreesContainer from "../TreesContainer/TreesContainer";
-import arrow from '../../assets/arrow.png';
+import TreesContainer from '../TreesContainer/TreesContainer';
 import { Link } from 'react-router-dom';
+import colorado from '../../assets/colorado-flag.webp';
+import Header from '../Header/Header';
 
+const SearchResult = ({ filteredTrees, changeSelectedTree, clearZipTrees, city }) => {
+  window.scroll(0,0);
 
-const SearchResult = ({filteredTrees, changeSelectedTree, clearZipTrees}) => {
-    return (
-        <>
-            <h2>Best Trees For Your Area</h2>
-            <h3>{`Your Growing Zone: ${filteredTrees[0].growing_zone}`}</h3>
-        <TreesContainer filteredTrees={filteredTrees} changeSelectedTree={changeSelectedTree}/>
-        <Link to='/'>
-            <img src={arrow} alt='black arrow pointing to the left' onClick={() => clearZipTrees()}></img>
-        </Link>
-       </>
-    )
+  return (
+    <>
+      <div className='image2-box' style={{ backgroundImage: `url(https://photoeverywhere.co.uk/britain/dorset/trees.JPG)` }}>
+        <div className='search-page'>
+          <div className='search-results'>
+            <div className='mini-left'>
+                <Header clearZipTrees={clearZipTrees}/>
+            </div>
+            <div className='results-top'>
+              <h2 className='best-trees'>{`${city}: Zone ${filteredTrees[0].growing_zone}`}</h2>
+              <h3 className='your-zone'>Recommended Species</h3>
+            </div>
+            <TreesContainer className ='tree-container' filteredTrees={filteredTrees} changeSelectedTree={changeSelectedTree} />
+            <Link to='/'>
+              <input
+                className='leaf'
+                type='submit'
+                value='LEAF!'
+                data-cy='leaf-button'
+                onClick={() => clearZipTrees()}
+              />
+            </Link>
+            <br></br>
+            <img className='colorado2' alt='flag of Colorado' src={colorado}></img>
+            <p className='made2-in'>Made in and for CO</p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
+
 export default SearchResult;

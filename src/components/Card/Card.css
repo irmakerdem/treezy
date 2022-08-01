@@ -1,0 +1,15 @@
+.tree-image {
+  height: 20em;
+  width: 20em;
+  border-radius: 6%;
+  border: 0.5em solid #22577A;
+}
+
+.card {
+  margin-top: 3em;
+}
+
+.tree-name {
+  font-weight: 700;
+  font-size: 1.3em;
+}

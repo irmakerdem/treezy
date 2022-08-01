@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
+.header-link {
+  text-decoration: none;
+  text-shadow: 0.2em 0.2em #a0e000;
+}
+
+a {
+  color: rgb(91, 86, 86);
+}
+
+.header {
+  font-size: 500%;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: underline;
+}

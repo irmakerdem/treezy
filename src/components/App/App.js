@@ -16,7 +16,8 @@ class App extends Component {
       allZipCodes: [],
       selectedZip: '',
       filteredTrees: [], 
-      selectedTree: ''
+      selectedTree: '',
+      city: ''
     }
   }
   
@@ -32,20 +33,17 @@ class App extends Component {
     let matchZip = this.state.allZipCodes.find(zip => zip.zip_code === zippy);
     let treeList = this.state.allTrees.filter(tree => tree.growing_zone === matchZip.growing_zone)
       this.setState({
-        filteredTrees : treeList
+        filteredTrees : treeList,
+        city: matchZip.city
       })
   }
 
   changeSelectedTree = (idt) => {
-    console.log('id tree',idt)
     let matchTree = this.state.filteredTrees.find(tree => {
-     return tree.id === idt})
-     console.log('MATCH TREE BEFORE SET STATE', matchTree)
+      return tree.id === idt})
     this.setState({
       selectedTree: matchTree
     })
-    console.log('MATCH TREE AT THE END',matchTree)
-    // this.viewTree(this.state.selectedTree)
   }
 
   viewTree = (selectedTree) => {
@@ -77,33 +75,31 @@ class App extends Component {
   }
   
   render() {
-    console.log('SELECTED TREE AT THE ACTUAL END', this.state.selectedTree)
-    // const page = this.state.selectedZip && this.state.selectedTree ? '/details' : '/result' 
-    // page = selectedTree ? '/details' : '/result'
-    // console.log(page, "PAGE71")
     return (
       <>
-        <Header clearZipTrees={this.clearZipTrees}/>
         <Switch>
-          {/* <Route exact path='/' render={() => <Home changeZipCode={this.changeZipCode}/>}/> */}
-          <Route exact path="/">
-	          {this.state.selectedZip ? <Redirect to="/result" /> : <Home changeZipCode={this.changeZipCode}/>}
+          <Route 
+            exact path='/'>
+	          {this.state.selectedZip ? <Redirect to='/result' /> : <Home changeZipCode={this.changeZipCode}/>}
           </Route>;
-          <Route exact path="/result">
-	          {this.state.selectedTree ? <Redirect to="/trees/:id" /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree} clearZipTrees={this.clearZipTrees}/>}
+          <Route 
+            exact path='/result'>
+	          {this.state.selectedTree ? <Redirect to='/trees/:id' /> : <SearchResult city={this.state.city} filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree} clearZipTrees={this.clearZipTrees}/>}
           </Route>; 
-
-          <Route exact path='/trees/:id' render={() => <DetailsContainer selectedTree={this.state.selectedTree} clearSelectedTree={this.clearSelectedTree}/>}/>
-          <Route path='/*' render={()=> <Error />}/>
+          <Route 
+            exact path='/trees/:id' 
+            render={(match) => <DetailsContainer 
+            match={match.match.params.id}
+            clearZipTrees={this.clearZipTrees}
+            selectedTree={this.state.selectedTree} 
+            clearSelectedTree={this.clearSelectedTree}/>}/>
+          <Route 
+            path='/*' 
+            render={()=> <Error />}/>
         </Switch>
       </>
     )
   }
-  
 }
+
 export default App;
-
-
-{/* <Route exact path="/result">
-	{this.state.selectedTree ? <Redirect to="/details" /> : <SearchResult filteredTrees={this.state.filteredTrees} changeSelectedTree={this.changeSelectedTree}/>}
-</Route>;  */}
