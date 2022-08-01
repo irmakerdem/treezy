@@ -1,0 +1,38 @@
+[
+  {
+  "id": 4900,
+  "sid": 7,
+  "default_state": "CO",
+  "city": "AGATE",
+  "default_type": "STANDARD",
+  "zip_code": "80101",
+  "growing_zone": 5
+  },
+  {
+  "id": 4901,
+  "sid": 7,
+  "default_state": "CO",
+  "city": "AGUILAR",
+  "default_type": "STANDARD",
+  "zip_code": "81020",
+  "growing_zone": 6
+  },
+  {
+  "id": 4902,
+  "sid": 7,
+  "default_state": "CO",
+  "city": "AKRON",
+  "default_type": "STANDARD",
+  "zip_code": "80720",
+  "growing_zone": 5
+  },
+  {
+  "id": 4903,
+  "sid": 7,
+  "default_state": "CO",
+  "city": "ALAMOSA",
+  "default_type": "STANDARD",
+  "zip_code": "81101",
+  "growing_zone": 6
+  }
+]
