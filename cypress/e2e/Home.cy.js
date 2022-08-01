@@ -7,6 +7,8 @@ describe('Home', () => {
 
   it('The user should see the home page', () => {
     cy.get('[data-cy="header"]').contains('Treezy');
+    cy.get('[data-cy="zip-code-entry"]').invoke('attr', 'placeholder').should('contain', 'Enter 5-Digit CO Zip Code');
+    cy.get('[data-cy="go-button"]').invoke('attr', 'value').should('contain', 'GO!');
   })
 
-})
+ })
