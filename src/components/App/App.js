@@ -40,7 +40,7 @@ class App extends Component {
 
   changeSelectedTree = (idt) => {
     let matchTree = this.state.filteredTrees.find(tree => {
-     return tree.id === idt})
+      return tree.id === idt})
     this.setState({
       selectedTree: matchTree
     })
@@ -77,9 +77,7 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <Header clearZipTrees={this.clearZipTrees}/> */}
         <Switch>
-          {/* <Route exact path='/' render={() => <Home changeZipCode={this.changeZipCode}/>}/> */}
           <Route 
             exact path='/'>
 	          {this.state.selectedZip ? <Redirect to='/result' /> : <Home changeZipCode={this.changeZipCode}/>}
@@ -90,7 +88,9 @@ class App extends Component {
           </Route>; 
           <Route 
             exact path='/trees/:id' 
-            render={() => <DetailsContainer 
+            render={(match) => <DetailsContainer 
+            match={match.match.params.id}
+            clearZipTrees={this.clearZipTrees}
             selectedTree={this.state.selectedTree} 
             clearSelectedTree={this.clearSelectedTree}/>}/>
           <Route 

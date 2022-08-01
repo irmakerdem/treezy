@@ -16,10 +16,16 @@
 
 .details-middle {
   border: 0.2em solid black;
-  width: 40em;
   margin: 0 auto;
   background-color: #22577A;
   margin-top: 50px;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.details-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .details-top, .details-bottom {
@@ -55,6 +61,7 @@ ul, li, b {
 
 .nature-link {
   margin-bottom: 1000px;
+  color: white;
 }
 
 .hidden {
@@ -175,3 +182,4 @@ ul, li, b {
   border-radius: 6%;
   border: 0.5em solid #22577A;
 }
+

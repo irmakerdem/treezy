@@ -6,13 +6,15 @@ import colorado from '../../assets/colorado-flag.webp';
 import Header from '../Header/Header';
 
 const SearchResult = ({ filteredTrees, changeSelectedTree, clearZipTrees, city }) => {
+  window.scroll(0,0);
+
   return (
     <>
       <div className='image2-box' style={{ backgroundImage: `url(https://photoeverywhere.co.uk/britain/dorset/trees.JPG)` }}>
         <div className='search-page'>
           <div className='search-results'>
             <div className='mini-left'>
-                <Header />
+                <Header clearZipTrees={clearZipTrees}/>
             </div>
             <div className='results-top'>
               <h2 className='best-trees'>{`${city}: Zone ${filteredTrees[0].growing_zone}`}</h2>
@@ -29,7 +31,7 @@ const SearchResult = ({ filteredTrees, changeSelectedTree, clearZipTrees, city }
               />
             </Link>
             <br></br>
-            <img className='colorado2' src={colorado}></img>
+            <img className='colorado2' alt='flag of Colorado' src={colorado}></img>
             <p className='made2-in'>Made in and for CO</p>
           </div>
         </div>
