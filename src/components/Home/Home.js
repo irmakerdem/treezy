@@ -17,8 +17,10 @@ const Home = ({ changeZipCode }) => {
               <Form changeZipCode={changeZipCode}/>
             </section>
             <br></br>
-            <img className='colorado' alt='flag of Colorado' src={colorado}></img>
-            <p className='made-in'>Made in and for CO</p>
+            <div className='home-bottom'>
+              <img className='colorado' alt='flag of Colorado' src={colorado}></img>
+              <p className='made-in'>Made in and for CO</p>
+            </div>
           </main>
         </div>
       </div>

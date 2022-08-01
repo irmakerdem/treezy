@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&display=swap');
 
 .your-zone {
-  font-size: 1.5em;
+  font-size: 1em;
   margin-bottom: 0em;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .best-trees {
-  font-size: 2.2em;
+  font-size: 1.5em;
   font-weight: 700;
   margin-bottom: -0.5em;
 }
@@ -29,7 +29,7 @@
   background-color: rgb(91, 86, 86);
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   padding-top: 0.8em;
   padding-bottom: 1.8em;
   overflow: hidden;
@@ -82,7 +82,7 @@
 }
 
 .results-top {
-  padding: 0.5% 2% 2.5% 1.5%;
+  padding: 0.5% 3% 2% 3%;
   color: white;
   background-color: #22577A;
   margin: 0 auto;

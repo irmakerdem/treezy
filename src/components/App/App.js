@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import DetailsContainer from '../DetailsContainer/DetailsContainer';
-import Header from '../Header/Header';
 import SearchResult from '../SearchResult/SearchResult';
 import Home from '../Home/Home';
 import { getTrees, getZip } from '../../apiCalls';
@@ -32,22 +31,17 @@ class App extends Component {
   filterTrees = (zippy) => {
     let matchZip = this.state.allZipCodes.find(zip => zip.zip_code === zippy);
     let treeList = this.state.allTrees.filter(tree => tree.growing_zone === matchZip.growing_zone)
-      this.setState({
-        filteredTrees : treeList,
-        city: matchZip.city
-      })
-  }
-
-  changeSelectedTree = (idt) => {
-    let matchTree = this.state.filteredTrees.find(tree => {
-      return tree.id === idt})
     this.setState({
-      selectedTree: matchTree
+      filteredTrees : treeList,
+      city: matchZip.city
     })
   }
 
-  viewTree = (selectedTree) => {
-//
+  changeSelectedTree = (idt) => {
+    let matchTree = this.state.filteredTrees.find(tree => tree.id === idt)
+    this.setState({
+      selectedTree: matchTree
+    })
   }
 
   clearZipTrees = () => {
@@ -89,10 +83,10 @@ class App extends Component {
           <Route 
             exact path='/trees/:id' 
             render={(match) => <DetailsContainer 
-            match={match.match.params.id}
-            clearZipTrees={this.clearZipTrees}
-            selectedTree={this.state.selectedTree} 
-            clearSelectedTree={this.clearSelectedTree}/>}/>
+              match={match.match.params.id}
+              clearZipTrees={this.clearZipTrees}
+              selectedTree={this.state.selectedTree} 
+              clearSelectedTree={this.clearSelectedTree}/>}/>
           <Route 
             path='/*' 
             render={()=> <Error />}/>

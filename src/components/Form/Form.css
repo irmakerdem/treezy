@@ -29,11 +29,11 @@ form {
   background-color: rgb(91, 86, 86);
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
   padding-top: 0.8em;
   padding-bottom: 1.8em;
   overflow: hidden;
-} 
+}
   
 .btn:hover {
   border-radius: 1.3em 0.3em;
