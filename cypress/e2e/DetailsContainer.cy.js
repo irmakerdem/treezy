@@ -15,8 +15,16 @@ describe('Details Container', () => {
   it('Should contain the details about Jane Magnolia tree', () => {
     cy.get('.tree-title').contains('Jane Magnolia')
     cy.get('.main-image > .detail-page-image').should('have.attr', 'src', 'https://raw.githubusercontent.com/irmakerdem/tree-pal-api/main/assets/jane-magnolia/jane-magnolia-main-wo-border.jpg')
-    cy.get('.detail-page-image').should('have.length', 4);
-      
-    
+    cy.get('.detail-page-image').should('have.length', 4); 
+  })
+
+  it('Should display attributes', () => {
+    cy.get('.details-middle').contains('Attributes')
+    cy.get('.bullet-list').should('have.length', 1).contains('Attractive Foliage')
+  })
+
+  it('Should have more information about the tree', () => {
+    cy.get('.more-about').contains('More About')
+    cy.get('.emojis').should('have.length', 9).contains('🐝')
   })
 })
