@@ -88,7 +88,8 @@ class App extends Component {
           </Route>; 
           <Route 
             exact path='/trees/:id' 
-            render={() => <DetailsContainer 
+            render={(match) => <DetailsContainer 
+            match={match.match.params.id}
             clearZipTrees={this.clearZipTrees}
             selectedTree={this.state.selectedTree} 
             clearSelectedTree={this.clearSelectedTree}/>}/>
