@@ -3,6 +3,7 @@ describe('Details Container', () => {
     cy.intercept('GET', 'https://tree-pal-api.herokuapp.com/api/v1/trees', {fixture : 'getTreeMockData.json'});
     cy.intercept('GET', 'https://tree-pal-api.herokuapp.com/api/v1/zip', {fixture : 'getZipMockData.json'});
     cy.visit('http://localhost:3000/');
+    cy.get('[data-cy="header"]').contains('Treezy');
     cy.get('[data-cy="zip-code-entry"]').type('80101');
     cy.get('[data-cy="go-button"]').invoke('attr', 'value').should('contain', 'GO!')
     cy.get('[data-cy="go-button"]').click()
@@ -26,5 +27,14 @@ describe('Details Container', () => {
   it('Should have more information about the tree', () => {
     cy.get('.more-about').contains('More About')
     cy.get('.emojis').should('have.length', 9).contains('🐝')
+  })
+
+  it('Should have leaf button', () => {
+    cy.get('[data-cy="leaf-button"]').should('have.attr','value','LEAF!').click()
+  })
+
+  it('Should be able to go back to the home page when clicking logo', () => {
+    cy.get('[data-cy="header"]').click()
+    cy.url().should('eq', 'http://localhost:3000/');
   })
 })

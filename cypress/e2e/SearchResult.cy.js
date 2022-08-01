@@ -3,6 +3,7 @@ describe('Search Result', () => {
     cy.intercept('GET', 'https://tree-pal-api.herokuapp.com/api/v1/trees', {fixture : 'getTreeMockData.json'});
     cy.intercept('GET', 'https://tree-pal-api.herokuapp.com/api/v1/zip', {fixture : 'getZipMockData.json'});
     cy.visit('http://localhost:3000/');
+    cy.get('[data-cy="header"]').contains('Treezy');
     cy.get('[data-cy="zip-code-entry"]').type('80101');
     cy.get('[data-cy="go-button"]').invoke('attr', 'value').should('contain', 'GO!')
     cy.get('[data-cy="go-button"]').click()
