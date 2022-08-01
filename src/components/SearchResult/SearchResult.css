@@ -57,7 +57,7 @@
   justify-content: space-evenly;
   align-items: center;
   background-image: linear-gradient(to right,
-	rgba(199.5, 220.5, 220.5, .85) 150px, rgba(200, 221, 221, 0.95) 100%);
+	rgba(199.5, 220.5, 220.5, .85) 150px, rgba(199.5, 220.5, 220.5, .85) 100%);
 }
 
 .made2-in {

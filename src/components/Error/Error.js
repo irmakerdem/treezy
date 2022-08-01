@@ -1,4 +1,5 @@
 import React from 'react';
+import './Error.css';
 import Header from '../Header/Header';
 
 const Error = () => {
