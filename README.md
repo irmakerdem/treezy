@@ -1,6 +1,6 @@
 # 🌳 Treezy
 
-![TreezyDemo](https://media.giphy.com/media/29GKZcSODzsxjK7zuR/giphy.gif)
+![TreezyDemo](https://user-images.githubusercontent.com/87993138/182283911-8a81f451-c6b7-46ca-a9e8-1bf47f036268.gif)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
