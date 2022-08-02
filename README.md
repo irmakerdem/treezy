@@ -1,9 +1,8 @@
 # 🌳 Treezy
 
-Deployed Link Here
-
 ## Table of Contents
 - [Project Overview](#project-overview)
+- [Deployment](#deployment)
 - [Learning Goals](#learning-goals)
 - [Technologies and Tools](#technologies-and-tools)
 - [Project Reflections](#project-reflections)
@@ -14,15 +13,16 @@ Deployed Link Here
 - [Other Resources](#other-resources)
 
 ## Project Overview
-
 Treezy is a full-stack environmental application that allows a user to input their Colorado zip code and see what trees they are able to grow in their respective growing/hardiness zone. The U.S. has 13 hardiness zones (Treezy currently uses 8 of these) which have different climate implications that determine what plant-life would thrive in a given geographic area. Our goal is to inform our user of not only what kind of trees they could grow where they live, but also more information about those trees, such as their mature height, growing speed, foliage color, and more! 
 
 Back-end: We hand-rolled our data in Google Sheets, used Express for our server, and PostgreSQL as our database. We deployed our API to Heroku for easy access to our endpoints instead of running the API locally. 
 
 Front-end: We used React, React Router, Hooks, and more. We used end-to-end (E2E) testing on Treezy using Cypress.
 
-## Learning Goals
+## Deployment
+View our deployed [Treezy](https://treezy.herokuapp.com/) app.
 
+## Learning Goals
 This project is a part of Turing School of Software and Design's [Stretch Tech](https://frontend.turing.edu/projects/module-3/stretch.html).
 
 * Self-teach new technologies quickly
@@ -51,7 +51,6 @@ This project is a part of Turing School of Software and Design's [Stretch Tech](
 
 ## Project Reflections
 #### Challenges
-
 * We had to reset and reseed our database many times to reformat the data, fix broken links, and fill in incomplete tree information
 * CSS was difficult because each component was interconnected and then bundled by Webpack
 * Refreshing the application would reset state, which would leave all data fields as undefined
@@ -105,6 +104,7 @@ Future features could include:
 ## Other Resources
 * [Stack Overflow](https://stackoverflow.com/)
 * [Convert CSV to SQL](https://www.convertcsv.com/csv-to-sql.htm)
+* [US Zip Code List](https://www.uszipcodeslist.net/)
 * [Tree Data - Nature Hills](https://www.naturehills.com/)
 * [Tania Rascia - Express Tutorial](https://www.taniarascia.com/node-express-postgresql-heroku/)
 * [Nick Ciliak - Button Inspiration](https://codepen.io/nickcil/pen/vErdeB)
