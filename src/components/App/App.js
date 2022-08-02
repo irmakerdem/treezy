@@ -74,7 +74,7 @@ class App extends Component {
         <Switch>
           <Route 
             exact path='/'>
-	          {this.state.selectedZip ? <Redirect to='/result' /> : <Home changeZipCode={this.changeZipCode}/>}
+	          {this.state.selectedZip ? <Redirect to='/result' /> : <Home changeZipCode={this.changeZipCode} clearZipTrees={this.clearZipTrees}/>}
           </Route>;
           <Route 
             exact path='/result'>
@@ -89,7 +89,7 @@ class App extends Component {
               clearSelectedTree={this.clearSelectedTree}/>}/>
           <Route 
             path='/*' 
-            render={()=> <Error />}/>
+            render={()=> <Error clearZipTrees={this.clearZipTrees}/>}/>
         </Switch>
       </>
     )

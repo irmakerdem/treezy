@@ -4,14 +4,14 @@ import Form from '../Form/Form';
 import Header from '../Header/Header';
 import colorado from '../../assets/colorado-flag.webp';
 
-const Home = ({ changeZipCode }) => {
+const Home = ({ changeZipCode, clearZipTrees }) => {
   return (
     <>
       <div className='image-box' style={{ backgroundImage: `url(https://photoeverywhere.co.uk/britain/dorset/trees.JPG)`}}>
         <div className='home-page'>
           <main className='main-wrapper'>
             <section>
-              <Header />
+              <Header clearZipTrees={clearZipTrees}/>
             </section>
             <section className='main-container'>
               <Form changeZipCode={changeZipCode}/>
