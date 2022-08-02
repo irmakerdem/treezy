@@ -74,7 +74,7 @@ class App extends Component {
         <Switch>
           <Route 
             exact path='/'>
-	          {this.state.selectedZip ? <Redirect to='/result' /> : <Home changeZipCode={this.changeZipCode}/>}
+	          {this.state.selectedZip ? <Redirect to='/result' /> : <Home changeZipCode={this.changeZipCode} clearZipTrees={this.clearZipTrees}/>}
           </Route>;
           <Route 
             exact path='/result'>
