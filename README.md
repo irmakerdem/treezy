@@ -1,5 +1,7 @@
 # 🌳 Treezy
 
+![TreezyDemo](https://media.giphy.com/media/29GKZcSODzsxjK7zuR/giphy.gif)
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Deployment](#deployment)
