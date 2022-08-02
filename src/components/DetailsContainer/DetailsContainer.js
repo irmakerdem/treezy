@@ -45,7 +45,7 @@ const DetailsContainer = ({clearSelectedTree, clearZipTrees, match}) => {
             </div>
             <div className='details-wrapper'>
               <div className='details-middle'>
-                <p className='attributes-title'>Attributes</p>
+                <p className='attributes-title'>About This Tree</p>
                 <ul className='bullet-list'>
                   <li className='a-list'>{myTree.descrip1}</li>
                   <li className='a-list'>{myTree.descrip2}</li>
@@ -58,7 +58,7 @@ const DetailsContainer = ({clearSelectedTree, clearZipTrees, match}) => {
             </div>
             <div className='details-bottom'>
               <section className='more-about'>
-                <h4 className='about-this-tree about'>More About This Tree</h4>
+                <h4 className='about-this-tree about'>Attributes</h4>
                 <p className='about-this-tree emojis'><b>{`☀️ Sun Preference: `}</b>{`${myTree.sun_preference} ☀️`}</p>
                 <p className='about-this-tree emojis'><b>{`🪴 Soil Preference: `}</b>{`${myTree.soil_preference} 🪴`}</p>
                 <p className='about-this-tree emojis'><b>{`🐢 Growth Speed: `}</b>{`${myTree.growth_speed} 🐢`}</p>

@@ -19,13 +19,13 @@ describe('Details Container', () => {
     cy.get('.detail-page-image').should('have.length', 4); 
   })
 
-  it('Should display attributes', () => {
-    cy.get('.details-middle').contains('Attributes')
+  it('Should display about the tree', () => {
+    cy.get('.details-middle').contains('About This Tree')
     cy.get('.bullet-list').should('have.length', 1).contains('Attractive Foliage')
   })
 
-  it('Should have more information about the tree', () => {
-    cy.get('.more-about').contains('More About')
+  it('Should have attributes', () => {
+    cy.get('.more-about').contains('Attributes')
     cy.get('.emojis').should('have.length', 9).contains('🐝')
   })
 
