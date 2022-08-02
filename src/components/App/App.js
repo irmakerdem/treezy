@@ -89,7 +89,7 @@ class App extends Component {
               clearSelectedTree={this.clearSelectedTree}/>}/>
           <Route 
             path='/*' 
-            render={()=> <Error />}/>
+            render={()=> <Error clearZipTrees={this.clearZipTrees}/>}/>
         </Switch>
       </>
     )
