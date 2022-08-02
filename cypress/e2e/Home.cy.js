@@ -11,4 +11,8 @@ describe('Home', () => {
     cy.get('[data-cy="go-button"]').invoke('attr', 'value').should('contain', 'GO!');
   })
 
+  // it('Should be able to go back to the home page when clicking logo', () => {
+	// 	cy.get('[data-cy="header"]').click();
+	// 	cy.url().should('eq', 'http://localhost:3000/');
+	// });
  })

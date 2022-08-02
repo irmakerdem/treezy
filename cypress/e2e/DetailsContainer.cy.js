@@ -37,4 +37,8 @@ describe('Details Container', () => {
     cy.get('[data-cy="header"]').click()
     cy.url().should('eq', 'http://localhost:3000/');
   })
+
+  it('Should be able to go ', () => {
+    cy.get('.ext-link > .about-this-tree').should('have.attr','href','https://www.naturehills.com/magnolia-x-jane')
+  })
 })

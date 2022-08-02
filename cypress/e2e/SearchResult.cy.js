@@ -19,6 +19,11 @@ describe('Search Result', () => {
     })
   })
 
+  it('Should be able to go back to the home page when clicking logo', () => {
+		cy.get('[data-cy="header"]').click();
+		cy.url().should('eq', 'http://localhost:3000/');
+	});
+
   it('Should have leaf button', () => {
     cy.get('[data-cy="leaf-button"]').should('have.attr','value','LEAF!').click()
   })
