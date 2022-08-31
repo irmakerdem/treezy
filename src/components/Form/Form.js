@@ -28,6 +28,8 @@ class Form extends Component {
             name='zip'
             placeholder='Enter 5-Digit CO Zip Code'
             pattern='[0-9]{5}'
+            // min='80101'
+            // max='81656'
             onChange={event => this.handleChange(event)}
             required
           />
