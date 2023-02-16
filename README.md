@@ -19,10 +19,10 @@ Treezy is a full-stack environmental application that allows a user to input the
 
 Back-end: We hand-rolled our data in Google Sheets, used Express for our server, and PostgreSQL as our database. We deployed our API to Heroku for easy access to our endpoints instead of running the API locally. 
 
-Front-end: We used React, React Router, Hooks, and more. We used end-to-end (E2E) testing on Treezy using Cypress.
+Front-end: We used React, React Router, Hooks, and more. We used end-to-end (E2E) testing on Treezy using Cypress and deployed to Vercel.
 
 ## Deployment
-View our deployed [Treezy](https://treezy.herokuapp.com/) app.
+View our deployed [Treezy](https://treezy.vercel.app) app.
 
 ## Learning Goals
 This project is a part of Turing School of Software and Design's [Stretch Tech](https://frontend.turing.edu/projects/module-3/stretch.html).
@@ -50,14 +50,15 @@ This project is a part of Turing School of Software and Design's [Stretch Tech](
 * Cypress
 * NPM
 * Webpack
+* Vercel
 
 ## Project Reflections
 #### Challenges
 * We had to reset and reseed our database many times to reformat the data, fix broken links, and fill in incomplete tree information
 * CSS was difficult because each component was interconnected and then bundled by Webpack
 * Refreshing the application would reset state, which would leave all data fields as undefined
-* We struggled to realize that we needed an endpoint to return a single tree in addition to the endpoints we'd already created
-* We discovered a little too late that our editors had different formatting rules and needed to correct it for uniformity
+* We struggled to realize that we needed an endpoint to return a single tree in addition to the endpoints we had already created
+* We discovered a little too late that our code editors had different formatting rules and needed to update settings for uniformity
 
 #### Wins
 * Successfully seeded and deployed our databse
