@@ -20,12 +20,16 @@ class App extends Component {
     }
   }
   
-  changeZipCode = (zip , event) => {
+  changeZipCode = (zip, event) => {
     event.preventDefault()
-    this.setState({
-      selectedZip : zip
-    })
-    this.filterTrees(zip)
+    if (this.state.allZipCodes.find(zippp => zippp.zip_code === zip)) {
+      this.setState({
+        selectedZip : zip
+      })
+      this.filterTrees(zip)
+    } else {
+      alert("That zip code is not in the database yet! 😭")
+    }
   }
 
   filterTrees = (zippy) => {
